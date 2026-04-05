@@ -1,0 +1,357 @@
+<!---
+     Coded by Ashim Paudel
+     Copyright © Ashim Paudel 2021
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS style sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Some Google Fonts: Sofiya, Merriweather, Montserrat, Roboto Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100;300&family=Roboto+Slab:wght@300&family=Sofia&family=Ubuntu:wght@300&display=swap" >
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/43eec8ca9d.js" crossorigin="anonymous"></script>
+
+    <!-- Website Icon and Title -->
+    <link rel="icon" href="images/icons/ashim-paudel-icon.svg">
+    <title>theCuriousAshim</title>
+</head>
+
+<body>
+    <!-- Navigation Bar Container -->
+    <div id="my-navbar" class="nav-bar" >
+        <a href="#"><i class="fab fa-asymmetrik"></i>Ashim Paudel</a>
+        <div class="dropdown">
+            <button class="dropbtn">About Me
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#education">Education</a>
+              <a href="#hobbies-and-interests">Hobbies and Interests</a>
+            </div>
+        </div> 
+        <a href="#skills-and-projects">My Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0);" class="navbar-expand-icon" onclick="expand_nav_bar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Initial Introduction -->
+    <div id="ashim-paudel-container"  class="website-section">
+        <div class="content">
+            <h1 class="main-heading-text">Ashim</h1>
+            <img id="profile_picture" src="images/Ashim_Paudel.jpg" alt="Ashim Paudel, Front Image, Sitting in a chair with one hand on lap." width="200px">
+            <div class="sub-heading">Civil Engineer to be</div>
+            <div class="sub-description">This is Ashim Paudel '<em> The Curious</em>'. Just a random guy from small village in Nawalpur
+            <em> fond of computers and technology </em>: ready to explore what the world has
+            given for my side. <br>Exploring the areas of my interest since 2002 and learning new everyday :)  
+            </div>
+        </div>
+    </div>
+
+    <!--- Education Section -->
+    <div id="education" class="website-section about" >
+        <h2 class="sub-heads education-heading-text">Education</h2>
+        <div class="college-box-container-flexbox">
+            <div id="pcampus">
+                <div class="college-box-header"><a href="https://www.pcampus.edu.np" target="_blank">Pulchowk Campus</a></div>
+                <div class="college-box-content">Currently studying <em>Civil Engineering </em>at IOE - Pulchowk Campus, Lalitpur.Moreover, Exploring the life.❤️</div>
+            </div>
+            <div id="aroma">
+                <div class="college-box-header"><a href="https://www.aromaschool.edu.np" target="_blank">Aroma College</a></div>
+                <div class="college-box-content">Did my High School form Aroma College, Bharatpur<em> 2018-2020</em>. A 2 years journey surrounded with close group of friends. ❤️</div>
+            </div>
+            <div id="nls">
+                <div class="college-box-header"><a href="https://www.facebook.com/nepallok.sewa" target="_blank">Nepal Loksewa S.S</a></div>
+                <div class="college-box-content">Three years journey from <em>2015-2018</em> was marvellous. Well, completing Secondary School Education being a District Topper in SEE was more fascinating for me along with the memories made. ❤️</div>        
+            </div>
+        </div>  
+    </div>
+
+    <hr class="separator"> 
+
+    <!--- Hobbies and Interests -->
+    <div id="hobbies-and-interests" class="website-section about hobbies-interests-section">
+        <h2 class="sub-heads hobbies-and-interests-heading-text">Hobbies and Interests</h2>
+        <div class="hobby-details-container-flexbox">
+            <div id="hiking">
+                <div class="hobbies-image-header">
+                    <img src="images/hiking.jpg" width=100%>
+                    <div class="overlay">
+                        <div class="overlay-text"><i class="fas fa-hiking" style="font-size: 28px;"></i><br>Hiking</div>
+                    </div>
+                </div>
+                <div class="hobbies-box-description">Well, I love travelling especially Hiking. It's really fun to go hiking with friends and have much memories of that.</div>
+            </div>
+            <div id="drawing">
+                <div class="hobbies-image-header">
+                    <img src="images/drawing.jpg" width=100%>
+                    <div class="overlay">
+                        <div class="overlay-text"><i class="fas fa-paint-brush" style="font-size: 28px;"></i><br>Drawing</div>
+                    </div>
+                </div>
+                <div class="hobbies-box-description">As a hobby I used to draw pictures much more during my childhood than these days. But I'm moderate level portrayer. Ask me for your sketch, would try if I have liesure Hehe :). I do some vector portraits too. </div>
+
+            </div>
+            <div id="coding">
+                <div class="hobbies-image-header">
+                    <img src="images/coding.jpg" width=100%>
+                    <div class="overlay">
+                        <div class="overlay-text"><i class="fas fa-code" style="font-size: 28px;"></i><br>Coding</div>
+                    </div>
+                </div>
+                <div class="hobbies-box-description">Being a tech-enthusiast, I like to explore new tech related stuffs and do <code>coding</code> during my liesure time. Well, I built this website during my 1st sem vacation.</div>
+                
+            </div>
+            <div id="music">
+                <div class="hobbies-image-header">
+                    <img src="images/music.png" width=100%>
+                    <div class="overlay">
+                        <div class="overlay-text"><i class="fas fa-headphones-alt" style="font-size: 28px;"></i><br>Music</div>
+                    </div>
+                </div>
+                <div class="hobbies-box-description">Yeah! I am a great music listener. While doing above mentioned hobbies, I never miss to listen music. Spotify or Musixmatch are great apps for me. Recommend me some if you can Hehe :)</div>
+                
+            </div>
+        </div>
+    </div>
+
+    <hr class="separator"> 
+
+    <div id="skills-and-projects" class="website-section skills-and-projects-section">
+        <div class="skills-projects-flex-box">       
+            <div class="skills-head-card-container">
+                <div class="skills-projects-heading skills-text">Skills</div> 
+                <div class="skills-slideshow-container">
+                    <div class="skills-card">
+                        <div class="logo-container"><img src="images/icons/python-language-logotype.png"></div>
+                        <div class="skills-rating">Python<br>⭐⭐⭐⭐</div>
+                    </div>
+
+                    <div class="skills-card">
+                        <div class="logo-container"><img src="images/icons/autocad.svg"></div>
+                        <div class="skills-rating">Autodesk <br>Autocad Civil 3d<br>⭐⭐⭐⭐</div>
+                    </div>
+
+                    <div class="skills-card">
+                        <div class="logo-container"><img src="images/icons/C-programming-language.png"></div>
+                        <div class="skills-rating">C<br>⭐⭐⭐⭐</div>
+                    </div>
+
+                    <div class="skills-card">
+                        <div class="logo-container"><img src="images/icons/html-5.png"></div>
+                        <div class="skills-rating">HTML<br>⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="skills-card">
+                        <div class="logo-container"><img src="images/icons/css-3.png"></div>
+                        <div class="skills-rating">CSS<br>⭐⭐⭐⭐</div>
+                    </div>
+
+                    <div class="skills-card">
+                        <div class="logo-container"><img src="images/icons/wordpress.png"></div>
+                        <div class="skills-rating">Wordpress<br>⭐⭐⭐</div>
+                    </div>
+
+                    <div class="skills-card">
+                        <div class="logo-container"><img src="images/icons/latex.png"></div>
+                        <div class="skills-rating" style="left:22%">LATEX, Markdown<br>⭐⭐⭐⭐⭐</div>
+                    </div>
+
+                    <button class="slider-button skills-button-next-left" onclick="plusDivs(-1, skills_card_changer)">&#10094;</button>
+                    <button class="slider-button skills-button-next-right" onclick="plusDivs(+1, skills_card_changer)">&#10095;</button>
+                </div>
+            </div>   
+                
+            
+            <div class="col-separator"></div>  <!-- responsive separator line -->
+
+            <!-- Projects section -->
+            <div class="col-75 my-projects-container">
+                <div class="skills-projects-heading projects-text">Projects</div>
+                <div class="projects-card-layout">
+                    <div class="projects-img-container"><img src="images/projects/beamframe.jfif" style="width: 100%;"></div>
+                    <div class="projects-name-container">Beam Frame Library</div>
+                    <div class="overlay">
+                        <div class="overlay-text">Language: Python<br>
+                        <a href="https://github.com/Ashim-Paudel/Python-Beam-Analysis" target="_blank">View code <i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <div class="projects-img-container"><img src="images/projects/password-manager.gif" style="width: 100%;"></div>
+                    <div class="projects-name-container">Password Manager</div>
+                    <div class="overlay">
+                        <div class="overlay-text">Language: Python<br>
+                        <a href="https://github.com/Ashim-Paudel/Password-Manager" target="_blank">View code <i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <div class="projects-img-container"><img src="images/icons/wordpress.png" style="width: 70%;margin-top:8px"></div>
+                    <div class="projects-name-container">HHF- Website</div>
+                    <div class="overlay">
+                        <div class="overlay-text">Built on Wordpress<br>
+                        <a href="https://hhf305720256.wordpress.com/" target="_blank">View website <i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <div class="projects-img-container"><img src="images/projects/c-sewa.png" style="width: 90%;"></div>
+                    <div class="projects-name-container"  style="margin-top:5px">C- Sewa</div>
+                    <div class="overlay">
+                        <div class="overlay-text">
+                             College C-Project, E-sewa Prototype                      
+                            <a href="https://github.com/Ashim-Paudel/C-Sewa" target="_blank">View code <i class="fas fa-code"></i></a></div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <div class="projects-img-container"><img src="images//projects/ping-pong.gif" style="width: 100%;"></div>
+                    <div class="projects-name-container">Ping - Pong</div>
+                    <div class="overlay">
+                        <div class="overlay-text">Two player GUI based ping-pong game built on python.
+                            <a href="https://github.com/Ashim-Paudel/Ping-Pong">View code <i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <div class="projects-img-container"><img src="images//projects/snake_game.gif" style="width:85%;"></div>
+                    <div class="projects-name-container" style="margin-top:0">Snake Game</div>
+                    <div class="overlay">
+                        <div class="overlay-text">Snake game built on python.
+                            <a href="https://github.com/Ashim-Paudel/snake_game" target="_blank">View code <i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <div class="projects-img-container"><img src="images//projects/bmi-img.png" style="width: 100%;"></div>
+                    <div class="projects-name-container" style="margin-top:25px">BMI- Calculator</div>
+                    <div class="overlay">
+                        <div class="overlay-text">Tkinter GUI based<br> Body Mass Index calculator.
+                            <a href="https://github.com/Ashim-Paudel/BMI-calculator" target="_blank">View code <i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div> 
+
+                <button class="slider-button projects-button-next-left" onclick="plusDivs(-1, project_cards_slider)">&#10094;</button>
+                <button class="slider-button projects-button-next-right" onclick="plusDivs(+1, project_cards_slider)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contant Me Section -->
+    <div id="contact" class="website-section contact-section">
+        <div class="contact-top-section">
+            Hey! I would be happy to hear from you
+        </div>
+        <div class="contact-form-section">
+            <form action="https://formspree.io/f/mrgojzkr" method="POST" target="_blank" autocomplete="on">
+                <div class="form-top-flex-box">
+                    <input  type="text" id="name-input" name="name" placeholder="Your Name ..." required>
+                    <input  type="email" id="email-input" name="email" placeholder="Your E-mail ..." required>
+                    <input  type="text" id="phone-input" name="phone" placeholder="Phone ...">
+                </div>
+                <textarea id="feed-back" name="message" placeholder="Your message here ..."></textarea>
+                <input type="submit" id="submit-button" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-flex-box">
+            <div class="left-content">
+                <strong>Email: </strong><a href="mailto:paudelashim111@gmail.com">paudelashim111@gmail.com</a><br>
+                <strong>Phone: </strong><a href="tel:9862548802">9862548802</a>   
+            </div>
+            <div class="mid-content">
+                <i class="far fa-copyright"></i> Ashim Paudel<br>
+                Designed and Built by Ashim Paudel (2021)
+            </div>
+            <div class="right-content">
+                <a href="https://github.com/Ashim-Paudel" target="_blank" class="fa fa-github"></a>
+                <a href="https://www.linkedin.com/in/ashim-paudel-659949225" target="_blank" class="fa fa-linkedin"></a>
+                <a href="https://www.facebook.com/ashim.the.curious/" target="_blank" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/ashim_paudel_/" target="_blank" class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+    var SkillSlideIndex = 1;
+    var ProjectSlideIndex = 1;
+    var myIndex = 0;
+    automaticslide();       // infinitely running functions
+    skills_card_changer(SkillSlideIndex);   
+    project_cards_slider(ProjectSlideIndex);
+
+    function expand_nav_bar() {     // this will run on click to expand nav-bar
+        var x = document.getElementById("my-navbar");
+        if (x.className === "nav-bar") {
+            x.className += " responsive";
+        }
+        else {
+            x.className = "nav-bar";
+        }
+    }
+    
+    function plusDivs(n, func) {
+            func(SkillSlideIndex += n);
+    }
+
+    function skills_card_changer(n) { // for manual changing of slides of skills section
+        var i;
+        var x = document.getElementsByClassName("skills-card");
+        if (n > x.length) {SkillSlideIndex = 1}
+        if (n < 1) {SkillSlideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        }
+        x[SkillSlideIndex-1].style.display = "block";  
+    }
+
+    function automaticslide() {
+        var i;
+        var x = document.getElementsByClassName("skills-card");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(automaticslide, 2500); // Change image every 2.5 seconds
+    }
+
+    function project_cards_slider(n){
+        var i;
+        var x = document.getElementsByClassName("projects-card-layout");
+        if (n > x.length) {SkillSlideIndex = 1}
+        if (n < 1) {SkillSlideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        }
+        x[SkillSlideIndex-1].style.display = "block";  
+    }
+
+</script>
+
+</body>
+</html>
