@@ -1,0 +1,226 @@
+﻿Education
+Bachelors in Engineering
+IOE, Pulchowk Campus, Lalitpur
+04/2021 – 04/2025
+>>>Academic Achievement: 6th Overall IOE Rank in Civil Engineering 
+Programme with 84.60%
+[Explored field of civil engineering with additional diving in programming, 
+structural researches, field works and LEOism]
+
++2 Science
+Aroma College, Chitwan
+2018 – 2020
+>>> Academic Achievement: 3.93 CGPA
+[With determined to join Engineering after +2, I developed a deep interest in 
+Physics – Involved actively in founding STEM club Aroma]
+
+Secondary Education Examination (SEE)
+Shree Nepal Loksewa Secondary School, Nawalpur
+2018 AD
+>>> Academic Achievement: 3.95 GPA
+>>> Nawalparasi District Topper in SEE
+
+
+
+Achievements, Awards and Participations
+
+1.	Federal Public Service Commission Examination – Rank 1
+2026
+Category: Competitive Exams
+
+2.	Gandaki Province PSC Exam – Rank 1
+2026
+Category: Competitive Exams
+
+3.	Aron Engineering Competition 
+Category: Competitions
+2026 – 
+Competition Theme: “Sustainable Innovative Solutions in Civil Engineering” 
+Position: Winner
+
+2025 – 
+“Structural Failure Case Study Analysis Competition” 
+Position achieved: Runner Up 
+
+4.	Best Club President Award
+Awarded by Leo District Council 325 E 
+Year: 2024
+Category: Awards
+
+5.	Golden Jubilee Scholarship Scheme 
+A highly prestigious 4-year scholarship provided by Indian Embassy to 
+Pursue Bachelor’s level education in Nepal
+Year: 2021
+     Category: Scholarship
+6.	BE IOE Competitive Examination
+Rank: 15
+Highly competitive engineering entrance examination 
+Secured 4 year merit based full scholarship for BE study at Pulchowk 
+Campus
+Year: 2020
+Category: Scholarship/Competitive Examination
+
+7.	Mahatma Gandhi Scholarship Scheme
+Category: Scholarship
+Year: 2018
+Secured prestigious Mahatma Gandhi scholarship scheme provided by 
+Indian Embassy during 2 years Higher Secondary Education
+
+8.	Scholastic Meet Puzzle Obstacles Winner
+Venue: NCC, Chitwan
+Category: Competitions
+Year: 2018
+
+
+
+
+
+
+
+ 
+Experiences
+
+Civil Engineering Experiences
+
+	Highway Engineer (2026)
+•	Department of Roads, Government of Nepal 
+
+	Detailed Design and Estimate of Residential Building in Lalitpur (2026)
+•	Modern Bungalow 2.5 storey Residential for Client residing in Australia
+
+Civil Engineer (2026)
+•	Central Materials Testing Laboratory, Pulchowk Campus
+
+Civil Engineering Intern (2025)
+•	Sani Bheri Hydropower
+
+Non Destructive Testing and Damage Assessment
+•	Post-fire Damage Assessment at Chitwan - 2026
+•	Non Destructive Testing and Damage Mapping of Upper Tamakoshi 
+Hydropower Project’s Stilling Basin after debris damage - 2024
+•	Non Destructive Testing and Quality Assessment of RCC Columns in 
+Gautam Buddha International Cricket Stadium – 2024
+
+ERT Surveying 
+•	Listi, Sindhupalchowk: 2.7 km linear Survey – for groundwater 
+monitoring
+•	Helambu, Sidhupalchowk : Landslide Risk Assessment
+
+
+
+My Years in LEOism
+2021-2022: General Member – Kathmandu Valley Leo Club
+2022-2023: Vice President – Kathmandu Valley Leo Club
+2023-2024: President – Kathmandu Valley Leo Club
+2024-2025: Zone- I Chair and Environment Chief – LDC 325E
+2025-2026: Constitution and ByeLaws Chief – LDC 325E
+
+“Impactful Events organized during Presidency” 
+- Nyano Initiative 
+- Project Paana 
+- Financial Literacy for Engineers
+
+Organizing and Management Experiences
+•	Prastav – National Level Ideathon Competition  
+Year: 2022  
+Role: Program Coordinator cum Organizer 
+Related to: Kathmandu Valley Leo Club
+•	President – KVLC
+Led team of 25 executives and 85 General Members
+Organized members for activities like: Nyano Initiative, Project Paana, 
+Financial Literacy Workshop, Eco Hikes, Blood Donation, Leo Futsal
+Year: 2023/24
+•	National Level Shake Table Competition  
+Year: 2025 
+Role: Coordinator/Organizer
+
+
+
+
+Researches, Conferences and Presentations
+•	Poster Presentations: 
+2024 – “Use of Geocells for Slope Stabilization” – 30th Anniversary NGS
+2025 – “"Investigating the Effects of Seismic Pounding in a Series of RC 
+Buildings: A Case Study of the Ason Area.” – Kathmandu Geo Lab Student 
+Research Symposium
+
+•	Conference 
+2024 – GeoMandu 2024 – “Geotechnics for Sustainable Infrastructure” – 
+Student Volunteer and Technical Team Member in Organizing Committee
+
+•	Publication
+Papers are in pipeline. Notify you on publication.
+
+ 
+
+Skills 
+1.	Programming 
+Python 95% 
+C 95% 
+HTML/CSS 95% 
+ 
+Techstacks: 
+Numpy, Pandas, Matplotlib, Jupyter Notebook, VS Code, Git, Github
+
+2.	TypeSetting 
+\latex
+ Markdown, Microsoft Office Packages
+
+3.	Civil Engineering 
+Autodesk Autocad 
+Civil 3D 
+ETABS 
+Benteley RCDC  
+OpenSees 
+
+
+
+Hobbies 
+Drawing/Sketching, Movies, Hiking, Coding, GeoPolitics
+
+
+
+
+Prompt to AI
+ 
+I have added entire content that I thought best for my personal portfolio website.
+
+This includes, Educational timelines, Achievements-Awards, Experiences and 
+Skills
+
+I have added the things that I think will be significant..
+
+What I want you to analyze and study from this document is:
+Have a thorough look at the overall content
+Analyze the structuring of my contents
+Study the suitability of word/phrases usages
+Study which holds the highest values and which should not be kept in my portfolio 
+website
+
+
+What I want you to do is:
+Correct grammatical errors
+Make the writings/words or my way of expressing those more robust
+Make the things more structured
+Avoid unnecessary details (Dont delete but highlight that it may not be of that 
+value)
+Suggest what I can add to make it more appealing
+
+Final output desired:
+1. All modifications suggested and done In similar Docx file or chat
+2. An astonishing intro for myself that can best describe my interests, my passion 
+and my work
+ 
+KEEP IN MIND THAT:
+Using this content, I will finally use AI tools to build my personal portfolio 
+website so any suggestions on that (like what structures will make it best - from 
+including what details in what way/structure to give best UX and redability - this 
+will allow me to convey the max information with minimal distraction and 
+overload to visitors of my website)
+
+
+
+
+
+
+ 
