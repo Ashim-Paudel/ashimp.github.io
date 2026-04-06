@@ -5,7 +5,40 @@
 
 /* --- Blog Hero & Listing --- */
 .blog-hero {
-  padding: 140px clamp(20px, 8vw, 120px) 40px;
+    padding: 140px 0 40px; /* Remove side padding here, handle it in the container */
+    max-width: 1100px;      /* Set a consistent max-width */
+    margin: 0 auto;         /* Center it */
+    padding-left: 24px;     /* Match the List padding */
+}
+
+/* Update the List section to match the Hero */
+.blog-list-section {
+    padding: 0 24px 120px;  /* Standardize horizontal padding */
+    max-width: 1100px;      /* Identical to Hero max-width */
+    margin: 0 auto;         /* Centers the section on the page */
+}
+
+.blog-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;               /* Fixed gap between date and content */
+    padding: 30px 0;
+    text-align: left;        /* CRITICAL: Force left alignment */
+    width: 100%;
+}
+
+.blog-list-date {
+    min-width: 100px;        /* Fixes the width of the date column */
+    flex-shrink: 0;          /* Prevents the date from getting squished */
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-mute);
+    padding-top: 6px;        /* Vertical alignment with the title */
+}
+
+.blog-list-body {
+    flex: 1;                 /* Allows the body to take up remaining space */
+    text-align: left;        /* Ensures text doesn't center itself */
 }
 
 .blog-list-container {
@@ -70,11 +103,6 @@
     color: inherit;
 }
 
-.blog-list-section {
-  padding: 0 clamp(20px, 8vw, 120px) clamp(60px, 8vw, 120px);
-  max-width: 860px;
-}
-
 .blog-list-item {
   display: flex;
   align-items: flex-start;
@@ -84,9 +112,23 @@
   transition: transform 0.2s;
 }
 
-.blog-list-item:first-child { border-top: 1px solid var(--border); }
-.blog-list-item:hover { transform: translateX(4px); }
+.blog-list-section {
+  padding: 0 clamp(20px, 8vw, 120px) 120px;
+  max-width: 100%; /* Changed from 860px to fill the space */
+}
 
+.blog-list-item {
+  width: 100%;
+  justify-content: space-between; /* Pushes title left and arrow right */
+}
+
+.blog-list-item:first-child { border-top: 1px solid var(--border); }
+.blog-list-item:hover {
+    background: rgba(45, 212, 191, 0.03); /* Subtle teal tint */
+    padding-left: 15px; /* Tiny slide effect */
+    border-radius: 8px;
+    transform: translateX(4px); 
+}
 .blog-list-date {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -118,8 +160,6 @@
 }
 
 /* --- Tags --- */
-.blog-list-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-/* Container for tags */
 .blog-list-tags {
     display: flex;
     flex-wrap: wrap;
@@ -127,7 +167,6 @@
     margin-bottom: 15px;
 }
 
-/* Individual Tag with Gentle Gradient */
 .blog-tag {
     display: inline-block;
     font-family: var(--font-mono);
@@ -137,38 +176,24 @@
     border-radius: 100px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    
-    /* The Gradient: From a subtle tinted version to a transparent one */
-    background: linear-gradient(
-        135deg, 
-        rgba(45, 212, 191, 0.15) 0%, 
-        rgba(45, 212, 191, 0.05) 100%
-    );
-    
-    /* Borders & Text */
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.15) 0%, rgba(45, 212, 191, 0.05) 100%);
     color: var(--accent1);
     border: 1px solid rgba(45, 212, 191, 0.3);
-    backdrop-filter: blur(4px); /* Adds a subtle glass effect */
-    
+    backdrop-filter: blur(4px);
     transition: all 0.3s ease;
     cursor: default;
 }
 
-/* Hover Effect: Glows slightly */
 .blog-tag:hover {
     border-color: var(--accent1);
-    background: linear-gradient(
-        135deg, 
-        rgba(45, 212, 191, 0.25) 0%, 
-        rgba(45, 212, 191, 0.1) 100%
-    );
+    background: linear-gradient(135deg, rgba(45, 212, 191, 0.25) 0%, rgba(45, 212, 191, 0.1) 100%);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(45, 212, 191, 0.1);
 }
 
 /* --- Individual Post Layout --- */
 .post-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 140px 24px 80px;
 }
@@ -196,42 +221,100 @@
   margin-bottom: 10px;
 }
 
+.post-description {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    max-width: 800px;
+}
 
-/* Use Grid to define specific column widths */
+/* --- Grid Engine --- */
 .post-layout-grid {
     display: grid;
-    /* Main content takes 1 fraction (all remaining space), Sidebar is fixed at 280px */
     grid-template-columns: 1fr 280px; 
-    gap: 3rem;           /* Generous gap for better readability */
+    gap: 4rem;
     align-items: flex-start;
-    max-width: 1200px;   /* Keeps the layout centered and professional */
-    margin: 0 auto;
 }
 
-/* The Main Content Section */
+/* --- Content Typography & Spacing --- */
 .post-content {
-    min-width: 0;        /* Prevents code blocks from breaking the grid layout */
-    line-height: 1.7;    /* Optimal spacing for long technical posts */
+    min-width: 0;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--text-dim);
 }
 
-/* The Sidebar Section */
+.post-content p {
+    margin-bottom: 1.6rem;
+}
+
+.post-content h2 {
+    margin: 3.5rem 0 1.5rem;
+    font-family: var(--font-head);
+    color: var(--text);
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.post-content h3 {
+    margin: 2.5rem 0 1rem;
+    font-family: var(--font-head);
+    color: var(--text);
+}
+
+.post-content ul, .post-content ol {
+    margin-bottom: 1.6rem;
+    padding-left: 1.5rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Code Block Styling --- */
+.codehilite, pre {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    border: 1px solid #333;
+    position: relative;
+}
+
+.codehilite::before {
+    content: '';
+    display: block;
+    height: 18px;
+    width: 60px;
+    background-image: radial-gradient(circle, #ff5f56 5px, transparent 6px),
+                      radial-gradient(circle, #ffbd2e 5px, transparent 6px),
+                      radial-gradient(circle, #27c93f 5px, transparent 6px);
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    background-position: 0px center, 18px center, 36px center;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+/* --- Sidebar System --- */
 .post-sidebar {
-    width: 280px;        /* Matches the grid definition for stability */
+    width: 280px;
 }
 
-/* Sticky Sidebar Logic */
 .sticky-sidebar {
     position: sticky;
-    top: 2rem;           /* Puts space between the top of the browser and the TOC */
+    top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
 }
+
 .sidebar-section {
-  margin-bottom: 35px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   border-bottom: 1px solid var(--border);
 }
+
 .sidebar-section h3 {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -241,50 +324,22 @@
   margin-bottom: 15px;
 }
 
-@media (max-width: 992px) {
-    /* 1. Change grid to a single column */
-    .post-layout-grid {
-        grid-template-columns: 1fr;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* 2. Hide only the TOC section in the sidebar */
-    .sidebar-section:has(#toc-list) {
-        display: none;
-    }
-
-    /* 3. Make the sidebar stack below the content */
-    .post-sidebar {
-        width: 100%;
-        margin-top: 3rem; /* Space between the end of the blog and your bio */
-    }
-
-    /* 4. Disable sticky behavior so it scrolls naturally */
-    .sticky-sidebar {
-        position: static;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-/* TABLE OF CONTENT */
 .toc-list {
   list-style: none;
   padding: 0;
 }
 
-.toc-list li { margin-bottom: 10px; }
+.toc-list li { margin-bottom: 12px; }
 
 .toc-list a {
   text-decoration: none;
-  font-size: 0.9rem;
-  color: var(--text-dim);
-  transition: color 0.2s;
+  font-size: 0.88rem;
+  color: var(--text-mute);
+  transition: all 0.2s;
+  display: block;
 }
 
-.toc-list a:hover { color: var(--accent1); }
+.toc-list a:hover { color: var(--accent1); transform: translateX(4px); }
 
 .author-snippet {
   line-height: 1.6;
@@ -292,8 +347,7 @@
   color: var(--text-dim);
 }
 
-/* Share Button */
-/* --- Modern Share UI --- */
+/* --- Share Buttons --- */
 .share-modern-wrapper {
     display: flex;
     gap: 10px;
@@ -310,7 +364,7 @@
     padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s;
 }
 
 .share-icon-box {
@@ -327,10 +381,9 @@
 
 .share-trigger span {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--text-dim);
+    font-size: 0.75rem;
+    color: var(--text-mute);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .share-copy-only {
@@ -341,104 +394,40 @@
     height: 42px;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s;
 }
 
-/* Hover States */
-.share-trigger:hover {
+.share-trigger:hover, .share-copy-only:hover {
     border-color: var(--accent1);
-    background: rgba(45, 212, 191, 0.05);
-}
-
-.share-trigger:hover span {
-    color: var(--text);
-}
-
-.share-copy-only:hover {
     color: var(--accent1);
-    border-color: var(--accent1);
 }
 
-/* Success State for Copy */
-.copy-success {
-    color: #34d399 !important;
-    border-color: #34d399 !important;
-}
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    .post-layout-grid {
+        grid-template-columns: 1fr;
+    }
 
-/* --- Share Links --- */
-.share-links {
-  display: flex;
-  gap: 15px;
-}
+    .sidebar-section:has(#toc-list) {
+        display: none;
+    }
 
-.share-links a {
-  color: var(--text-mute);
-  font-size: 1.2rem;
-  transition: transform 0.2s, color 0.2s;
-}
+    .post-sidebar {
+        width: 100%;
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+    }
 
-.share-links a:hover {
-  color: var(--accent1);
-  transform: translateY(-2px);
-}
+    .sticky-sidebar {
+        position: static;
+    }
 
-/* --- Responsive Layout --- */
-@media (max-width: 900px) {
-  .post-layout-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .post-sidebar {
-    order: 2;
-    padding-top: 40px;
-    border-top: 1px solid var(--border);
-  }
-  
-  .sticky-sidebar { position: static; }
-
-  .post-container { padding-top: 100px; }
-  
-  .post-title { font-size: 2rem; }
+    .post-title { font-size: 2.2rem; }
 }
 
 @media (max-width: 600px) {
   .blog-list-item { flex-direction: column; gap: 8px; }
   .blog-list-date { min-width: unset; }
-}
-
-/* ---BLOG WRAPPER--- */
-/* The parent wrapper for the blog layout */
-.blog-wrapper {
-    display: flex;
-    gap: 2rem;           /* Space between content and sidebar */
-    max-width: 1200px;   /* Prevents the site from becoming too wide on huge monitors */
-    margin: 0 auto;      /* Centers the entire layout */
-    align-items: flex-start; /* Keeps the sidebar at the top as you scroll */
-}
-
-/* The Blog Content Section */
-.post-content {
-    flex: 1;             /* Takes up all remaining available space */
-    min-width: 0;        /* Critical fix for code blocks pushing the layout */
-}
-
-/* The Sidebar Section */
-.sidebar {
-    flex: 0 0 280px;     /* Does not grow, does not shrink, stays exactly 280px */
-    position: sticky;    /* Keeps the TOC visible while reading */
-    top: 2rem;           /* Distance from the top of the window when sticky */
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 900px) {
-    .blog-wrapper {
-        flex-direction: column; /* Stacks sidebar above/below content on phones */
-    }
-    
-    .sidebar {
-        flex: 1 1 auto;
-        width: 100%;
-        position: static;    /* Disables sticky on mobile for better scrolling */
-    }
+  .post-container { padding-top: 100px; }
 }
