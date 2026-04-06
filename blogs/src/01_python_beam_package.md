@@ -1,7 +1,7 @@
 ---
 title: How I Built a Beam Analysis Tool in Python
 date: Jan 2025
-tag: [eng, Engineering, Coding, Problem-Solving, Python]
+tag: [Engineering, Python, Problem-Solving]
 description: A walkthrough of the Python Beam Analysis library — the problem it solves, the math behind it, and lessons from open-sourcing it.
 ---
 
