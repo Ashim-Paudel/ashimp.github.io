@@ -1279,3 +1279,60 @@ footer {
   color: #000;
   border-color: var(--accent1);
 }
+
+
+/* Container for the code block */
+
+.codehilite, pre {
+    background-color: #1e1e1e; /* Dark background for contrast */
+    border-radius: 12px;       /* The rounded corners */
+    padding: 1.5rem;           /* Space inside the box */
+    margin: 1.5rem 0;          /* Space above and below the block */
+    overflow-x: auto;          /* Enables horizontal scrolling for long lines */
+    border: 1px solid #333;    /* Subtle border to define the shape */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds depth */
+}
+
+/* Styling the actual text inside */
+.codehilite pre, code {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Container for the code block */
+.codehilite, pre {
+    background-color: #1e1e1e; /* Dark background */
+    border-radius: 12px;       /* Rounded corners */
+    padding: 1rem 1.5rem 1.5rem 1.5rem; /* More top padding for the dots */
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border: 1px solid #333;
+    position: relative;        /* Required for absolute positioning of dots */
+}
+
+/* The MacOS-style dots */
+.codehilite::before {
+    content: '';
+    display: block;
+    height: 18px;              /* Increased height to prevent cutting */
+    width: 60px;
+    /* Red, Yellow, Green dots using radial gradients */
+    background-image: radial-gradient(circle, #ff5f56 5px, transparent 6px),
+                      radial-gradient(circle, #ffbd2e 5px, transparent 6px),
+                      radial-gradient(circle, #27c93f 5px, transparent 6px);
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    background-position: 0px center, 18px center, 36px center; /* Centered vertically */
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Ensure the code text doesn't overlap the dots */
+.codehilite pre {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}

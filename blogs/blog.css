@@ -165,6 +165,7 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(45, 212, 191, 0.1);
 }
+
 /* --- Individual Post Layout --- */
 .post-container {
   max-width: 1100px;
@@ -195,43 +196,42 @@
   margin-bottom: 10px;
 }
 
-/* --- Grid System --- */
+
+/* Use Grid to define specific column widths */
 .post-layout-grid {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 60px;
-  align-items: start;
+    display: grid;
+    /* Main content takes 1 fraction (all remaining space), Sidebar is fixed at 280px */
+    grid-template-columns: 1fr 280px; 
+    gap: 3rem;           /* Generous gap for better readability */
+    align-items: flex-start;
+    max-width: 1200px;   /* Keeps the layout centered and professional */
+    margin: 0 auto;
 }
 
+/* The Main Content Section */
 .post-content {
-  font-family: var(--font-body);
-  line-height: 1.8;
-  font-size: 1.08rem;
-  color: var(--text-dim);
+    min-width: 0;        /* Prevents code blocks from breaking the grid layout */
+    line-height: 1.7;    /* Optimal spacing for long technical posts */
 }
 
-.post-content h2 {
-  font-family: var(--font-head);
-  font-size: 1.75rem;
-  color: var(--text);
-  margin: 40px 0 16px;
+/* The Sidebar Section */
+.post-sidebar {
+    width: 280px;        /* Matches the grid definition for stability */
 }
 
-.post-content strong { color: var(--accent1); }
-
-/* --- Sidebar --- */
-
+/* Sticky Sidebar Logic */
 .sticky-sidebar {
-  position: sticky;
-  top: 100px;
+    position: sticky;
+    top: 2rem;           /* Puts space between the top of the browser and the TOC */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
-
 .sidebar-section {
   margin-bottom: 35px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border);
 }
-
 .sidebar-section h3 {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -241,6 +241,35 @@
   margin-bottom: 15px;
 }
 
+@media (max-width: 992px) {
+    /* 1. Change grid to a single column */
+    .post-layout-grid {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 2. Hide only the TOC section in the sidebar */
+    .sidebar-section:has(#toc-list) {
+        display: none;
+    }
+
+    /* 3. Make the sidebar stack below the content */
+    .post-sidebar {
+        width: 100%;
+        margin-top: 3rem; /* Space between the end of the blog and your bio */
+    }
+
+    /* 4. Disable sticky behavior so it scrolls naturally */
+    .sticky-sidebar {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* TABLE OF CONTENT */
 .toc-list {
   list-style: none;
   padding: 0;
@@ -376,4 +405,40 @@
 @media (max-width: 600px) {
   .blog-list-item { flex-direction: column; gap: 8px; }
   .blog-list-date { min-width: unset; }
+}
+
+/* ---BLOG WRAPPER--- */
+/* The parent wrapper for the blog layout */
+.blog-wrapper {
+    display: flex;
+    gap: 2rem;           /* Space between content and sidebar */
+    max-width: 1200px;   /* Prevents the site from becoming too wide on huge monitors */
+    margin: 0 auto;      /* Centers the entire layout */
+    align-items: flex-start; /* Keeps the sidebar at the top as you scroll */
+}
+
+/* The Blog Content Section */
+.post-content {
+    flex: 1;             /* Takes up all remaining available space */
+    min-width: 0;        /* Critical fix for code blocks pushing the layout */
+}
+
+/* The Sidebar Section */
+.sidebar {
+    flex: 0 0 280px;     /* Does not grow, does not shrink, stays exactly 280px */
+    position: sticky;    /* Keeps the TOC visible while reading */
+    top: 2rem;           /* Distance from the top of the window when sticky */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .blog-wrapper {
+        flex-direction: column; /* Stacks sidebar above/below content on phones */
+    }
+    
+    .sidebar {
+        flex: 1 1 auto;
+        width: 100%;
+        position: static;    /* Disables sticky on mobile for better scrolling */
+    }
 }
