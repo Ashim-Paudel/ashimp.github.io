@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="../blog.css">
 
     <script>
-    window.MathJax = {
-        tex: { 
-        inlineMath: [['$', '$'], ['\\(', '\\)']], 
-        displayMath: [['$$', '$$']] 
-        },
-        options: { 
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] 
-        }
-    };
+        // We use window["MathJax"] to avoid some linter warnings
+        window["MathJax"] = {
+            tex: { 
+            inlineMath: [['$', '$'], ['\\(', '\\)']], 
+            displayMath: [['$$', '$$']] 
+            },
+            options: { 
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] 
+            }
+        };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
 </head>
@@ -41,7 +42,7 @@
             <div class="post-meta">
                 <span class="post-date">Jan 2025</span>
                 <div class="blog-list-tags">
-                    <span class="blog-tag">ENG</span><span class="blog-tag">ENGINEERING</span><span class="blog-tag">CODING</span><span class="blog-tag">PROBLEM-SOLVING</span><span class="blog-tag">PYTHON</span>
+                    <span class="blog-tag">ENGINEERING</span><span class="blog-tag">PYTHON</span><span class="blog-tag">PROBLEM-SOLVING</span>
                 </div>
             </div>
             <h1 class="post-title">How I Built a Beam Analysis Tool in Python</h1>
@@ -50,26 +51,26 @@
 
         <div class="post-layout-grid">
             <main class="post-content">
-                <h1 id="introduction">Introduction</h1>
+                <h1>Introduction</h1>
 <p>In structural engineering, the ability to quickly and accurately calculate internal forces in a beam is fundamental. While professional software like <strong>ETABS</strong> or <strong>AutoCAD</strong> is powerful for large-scale projects, I wanted to create a lightweight, open-source Python module to solve statically determinate beams using basic equilibrium equations.</p>
-<h2 id="about-the-module">About the Module</h2>
+<h2>About the Module</h2>
 <p>This module is designed to solve 2D beams by applying the three equations of static equilibrium:
 - $\sum F_x = 0$
 - $\sum F_y = 0$
 - $\sum M_{point} = 0$</p>
-<h3 id="supported-features">Supported Features</h3>
+<h3>Supported Features</h3>
 <ul>
 <li><strong>Determinate 2D Beams:</strong> Support for Point Loads, UDL, UVL, and Point Moments.</li>
 <li><strong>Support Conditions:</strong> Fixed, Hinged, or Roller supports.</li>
 <li><strong>Internal Hinges:</strong> Capable of handling beams with internal discontinuities.</li>
 <li><strong>Visual Output:</strong> Generates Shear Force Diagrams (SFD) and Bending Moment Diagrams (BMD).</li>
 </ul>
-<h2 id="sign-conventions">Sign Conventions</h2>
+<h2>Sign Conventions</h2>
 <p>To maintain consistency in structural analysis, the following conventions are used in the code:
 - <strong>Positive X-axis:</strong> Right-hand side.
 - <strong>Positive Y-axis:</strong> Upward direction.
 - <strong>Positive Moment/Angle:</strong> Counter-clockwise direction.</p>
-<h2 id="implementation-example">Implementation Example</h2>
+<h2>Implementation Example</h2>
 <p>Using the module is straightforward. Here is a snippet showing how to define a beam with a point load and a UDL:</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">beam_analysis</span> <span class="kn">import</span> <span class="n">Beam</span><span class="p">,</span> <span class="n">PointLoad</span><span class="p">,</span> <span class="n">UDL</span><span class="p">,</span> <span class="n">Reaction</span>
 
@@ -89,7 +90,7 @@
 <span class="n">my_beam</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </code></pre></div>
 
-<h2 id="why-open-source">Why Open Source?</h2>
+<h2>Why Open Source?</h2>
 <p>Building this tool was as much about the process as the result. It allowed me to bridge the gap between Civil Engineering theory and Python automation. By sharing it on GitHub, I hope to provide a helpful resource for fellow IOE students and hobbyist coders interested in structural analysis.</p>
 <p>For more technical details and source code, visit the GitHub Repository.</p>
             </main>

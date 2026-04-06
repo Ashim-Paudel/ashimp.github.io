@@ -18,6 +18,7 @@
     font-size: 2.5rem;
     margin-bottom: 10px;
     background: linear-gradient(to right, #fff, var(--accent1));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

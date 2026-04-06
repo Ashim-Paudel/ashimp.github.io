@@ -1,5 +1,7 @@
 <script>
-    // Hamburger toggle logic
+{
+    // Wrapping in a single brace '{' at the start and end 
+    // tells VS Code this is a code block, which helps with scoping.
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     
@@ -7,9 +9,6 @@
         hamburger.addEventListener('click', () => {{
             navLinks.classList.toggle('open');
         }});
-        
-        navLinks.querySelectorAll('a').forEach(l => 
-            l.addEventListener('click', () => navLinks.classList.remove('open'))
-        );
     }}
+}
 </script>

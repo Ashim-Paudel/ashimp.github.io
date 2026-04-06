@@ -15,7 +15,8 @@ def load_partial(name):
 
 def build_blog():
     # 1. Load Skeletons and Global Components
-    nav = load_partial("nav")
+    nav_posts = load_partial("nav")           # Standard nav for articles (Back to Blog)
+    nav_list = load_partial("nav-blog-list")  # Special nav for index (Back to Portfolio)
     footer = load_partial("footer")
     sidebar_bio = load_partial("sidebar-bio")
     post_skeleton = load_partial("post-skeleton")
@@ -46,7 +47,7 @@ def build_blog():
         tags_html = "".join([f'<span class="blog-tag">{t.strip().upper()}</span>' for t in raw_tags])
 
         # Convert Markdown
-        html_content = markdown.markdown(md_body, extensions=['extra', 'codehilite', 'toc'])
+        html_content = markdown.markdown(md_body, extensions=['extra', 'codehilite'])
 
         # Create Article HTML
         final_post = post_skeleton.format(
@@ -55,7 +56,7 @@ def build_blog():
             description=meta.get('description', ''),
             tags_html=tags_html,
             html_content=html_content,
-            nav=nav,
+            nav=nav_posts,
             footer=footer,
             sidebar_bio=sidebar_bio
         )
@@ -88,7 +89,7 @@ def build_blog():
         )
 
         final_index_page = list_skeleton.format(
-        nav=nav,
+        nav=nav_list,
         footer=footer,
         post_cards=post_cards_html,
         scripts=scripts  # Inject it here
