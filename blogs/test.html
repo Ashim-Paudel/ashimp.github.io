@@ -79,22 +79,11 @@
 </script>
 
 
-    <script>
-    // Hamburger toggle logic
+  <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-    
-    if (hamburger && navLinks) {{
-        hamburger.addEventListener('click', () => {{
-            navLinks.classList.toggle('open');
-        }});
-        
-        navLinks.querySelectorAll('a').forEach(l => 
-            l.addEventListener('click', () => navLinks.classList.remove('open'))
-        );
-    }}
-</script>
-
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+  </script>
 </body>
 </html>
-

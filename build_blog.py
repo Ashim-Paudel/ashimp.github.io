@@ -21,6 +21,7 @@ def build_blog():
     post_skeleton = load_partial("post-skeleton")
     list_skeleton = load_partial("list-skeleton")
     item_partial = load_partial("list-item")
+    scripts = load_partial("scripts")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     all_posts_metadata = []
@@ -86,12 +87,12 @@ def build_blog():
             slug=post['slug']
         )
 
-    # Fill the List Skeleton
-    final_index_page = list_skeleton.format(
+        final_index_page = list_skeleton.format(
         nav=nav,
         footer=footer,
-        post_cards=post_cards_html
-    )
+        post_cards=post_cards_html,
+        scripts=scripts  # Inject it here
+        )
 
     (BASE_DIR / "blogs" / "index.html").write_text(final_index_page, encoding="utf-8")
     
