@@ -63,11 +63,11 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // 4. SKILL RINGS — build + animate on scroll
 // =============================================
 const SKILLS = [
-  { label: 'Python',    pct: 95, color: '#2dd4bf' },
+  { label: 'Python',    pct: 85, color: '#2dd4bf' },
   { label: 'OpenSees',  pct: 80, color: '#38bdf8' },
-  { label: 'ETABS',     pct: 95, color: '#2dd4bf' },
-  { label: 'MS Office', pct: 85, color: '#818cf8' },
+  { label: 'ETABS',     pct: 85, color: '#2dd4bf' },
   { label: 'AutoCAD',   pct: 95, color: '#38bdf8' },
+  { label: 'MS Office Tools', pct: 85, color: '#818cf8' },
   { label: 'LaTeX',     pct: 99, color: '#2dd4bf' },
 ];
 
@@ -161,6 +161,7 @@ const terminalLines = [
   { prompt: '$ ', text: 'ashim --whoami', delay: 400 },
   { prompt: '',   text: '', delay: 200 },
   { prompt: '',   key: 'Name        ', val: ': Ashim Paudel', delay: 100 },
+  { prompt: '',   key: 'Aka        ', val: ': theCuriousAshim', delay: 100 },
   { prompt: '',   key: 'Degree      ', val: ': B.E. Civil Engineering, IOE', delay: 100 },
   { prompt: '',   key: 'Aggregate   ', val: ': 84.60% — Rank 6', delay: 100 },
   { prompt: '',   key: 'PSC Federal ', val: ': Rank #1 (2026)', delay: 100 },

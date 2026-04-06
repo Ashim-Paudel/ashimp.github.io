@@ -107,3 +107,249 @@
     display: none;
   }
 }
+
+/* --- Individual Post Styles --- */
+
+.post-container {
+  max-width: 720px; /* Optimal reading width */
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+}
+
+.post-header {
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 32px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-mute);
+}
+
+.post-title {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.post-intro {
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* Typography for Content */
+.post-content {
+  line-height: 1.75;
+  font-size: 1.05rem;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+.post-content h2 {
+  font-family: var(--font-head);
+  margin: 40px 0 16px;
+  font-size: 1.6rem;
+}
+
+.post-content p {
+  margin-bottom: 24px;
+}
+
+.post-content strong {
+    color: var(--accent1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .post-container {
+    padding-top: 100px;
+  }
+  .post-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Layout Grid */
+.post-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px; /* Main content takes remaining space, Sidebar is 280px */
+  gap: 60px;
+  align-items: start;
+}
+
+/* Sidebar Styling */
+.post-sidebar {
+  font-size: 0.9rem;
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 100px; /* Adjust based on your nav height */
+}
+
+.sidebar-section {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-section h3 {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-mute);
+  margin-bottom: 15px;
+}
+
+/* Table of Contents List */
+.toc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.toc-list li {
+  margin-bottom: 10px;
+}
+
+.toc-list a {
+  text-decoration: none;
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+
+.toc-list a:hover {
+  color: var(--accent1);
+}
+
+.author-snippet {
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* Responsive: Collapse sidebar on mobile */
+@media (max-width: 900px) {
+  .post-layout-grid {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 40px;
+  }
+  
+  .post-sidebar {
+    order: 2; /* Move sidebar below content on mobile */
+  }
+  
+  .sticky-sidebar {
+    position: static; /* Remove sticky on mobile */
+  }
+}
+
+/* --- Post Layout Extensions --- */
+
+.post-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+}
+
+.post-header {
+  margin-bottom: 60px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 40px;
+}
+
+.post-title {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--text);
+  line-height: 1.1;
+  margin: 10px 0 20px;
+}
+
+.post-description {
+  font-size: 1.2rem;
+  color: var(--text-dim);
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+/* --- The 2-Column Grid --- */
+.post-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 80px;
+  align-items: start;
+}
+
+.post-content {
+  font-family: var(--font-body);
+  line-height: 1.8;
+  color: var(--text-dim);
+}
+
+.post-content h2 {
+  font-family: var(--font-head);
+  color: var(--text);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar-sticky {
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-block {
+  margin-bottom: 40px;
+  padding-left: 20px;
+  border-left: 1px solid var(--border); /* Subtle line matching portfolio */
+}
+
+.sidebar-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  letter-spacing: 0.1em;
+  margin-bottom: 15px;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.toc-list li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.toc-list a {
+  color: var(--text-mute);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.toc-list a:hover {
+  color: var(--accent1); /* Teal highlight on hover */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .post-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .post-sidebar {
+    display: none; /* Simplify for mobile reading */
+  }
+}
