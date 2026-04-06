@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} | Ashim Paudel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../blog.css">
+
+    <script>
+    window.MathJax = {{
+        tex: {{ 
+        inlineMath: [['$', '$'], ['\\(', '\\)']], 
+        displayMath: [['$$', '$$']] 
+        }},
+        options: {{ 
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] 
+        }}
+    }};
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+    {nav}
+
+    <article class="post-container">
+        <header class="post-header">
+            <div class="post-meta">
+                <span class="post-date">{date}</span>
+                <div class="blog-list-tags">
+                    {tags_html}
+                </div>
+            </div>
+            <h1 class="post-title">{title}</h1>
+            <p class="post-description">{description}</p>
+        </header>
+
+        <div class="post-layout-grid">
+            <main class="post-content">
+                {html_content}
+            </main>
+
+            <aside class="post-sidebar">
+                <div class="sticky-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Table of Contents</h3>
+                        <ul class="toc-list" id="toc-list"></ul>
+                    </div>
+                    {sidebar_bio}
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    {footer}
+    <script src="../blog-main.js"></script>
+</body>
+</html>

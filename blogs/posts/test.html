@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Title | Ashim Paudel</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../blog.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../../index.html" class="nav-logo">A<span>.</span>Paudel</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">← Back to Blog</a></li>
+      <li><a href="#">Students Resources</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- POST -->
+  <article class="post-container">
+    <header class="post-header">
+      <div class="post-meta">
+        <span class="post-date">April 2026</span>
+        <span class="post-category tag-eng">Structural Engineering</span>
+      </div>
+      <h1 class="post-title">Advanced Beam Analysis with Python</h1>
+    </header>
+
+    <div class="post-layout-grid">
+      <div class="post-content">
+        <p>In this post, we explore how to automate shear and moment diagrams...</p>
+        <h2 id="methodology">Methodology</h2>
+        <p>The core logic uses the singularity function method...</p>
+        <h2 id="implementation">Python Implementation</h2>
+        <p>Using the NumPy library, we can discretize the beam...</p>
+      </div>
+
+      <aside class="post-sidebar">
+        <div class="sidebar-block sticky-sidebar">
+          
+          <div class="sidebar-section">
+            <h3>Table of Contents</h3>
+            <ul class="toc-list">
+              <li><a href="#methodology">Methodology</a></li>
+              <li><a href="#implementation">Python Implementation</a></li>
+              <li><a href="#results">Final Results</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-section">
+            <h3>About the Author</h3>
+            <p class="author-snippet">
+              Civil Engineer & Programmer. Building tools to bridge the gap between structures and code.
+            </p>
+          </div>
+
+          <div class="sidebar-section">
+            <h3>Share</h3>
+            <div class="share-links">
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <footer>
+  <div class="footer-left">
+    © 2026 Ashim Paudel · Designed & Built from scratch in Nepal
+  </div>
+  <div class="footer-social">
+    <a href="https://github.com/Ashim-Paudel" target="_blank" class="social-link">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/ashim-paudel-659949225" target="_blank" class="social-link">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.facebook.com/ashim.the.curious/" target="_blank" class="social-link">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/ashim_paudel_/" target="_blank" class="social-link">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Hamburger toggle for mobile consistency
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  }
+</script>
+
+</body>
+</html>

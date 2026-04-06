@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog — Ashim Paudel writes about civil engineering, Python, open source, and life in Nepal.">
+  <title>Blog | Ashim Paudel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="blog.css">
+  <link rel="icon" href="../images/icons/ashim-paudel-icon.svg">
+</head>
+<body>
+  {nav}
+
+  <section class="blog-hero">
+    <div class="section-label">Writing</div>
+    <h1 class="section-title">Blog &<br>Thoughts.</h1>
+    <p class="section-sub">Notes on engineering, code, learning, and life in Nepal.<br>
+      Thinking out loud, one post at a time.</p>
+  </section>
+
+  <section class="blog-list-section">
+    {post_cards}
+    </section>
+
+  {footer}
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+  </script>
+</body>
+</html>
