@@ -703,26 +703,6 @@ section {
   border-color: rgba(129,140,248,0.25);
 }
 
-@media (max-width: 700px) {
-  .chapter-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .chapter-sticky {
-    position: static;
-  }
-  .timeline-cards {
-    padding-left: 24px;
-  }
-  .tl-dot {
-    left: 0;
-  }
-  .tl-content::before {
-    width: 16px;
-    left: -16px;
-  }
-}
-
 
 /* Chapter dividers */
 .chapter-divider {
@@ -788,11 +768,31 @@ section {
   box-shadow: 0 0 0 1px var(--accent4), 0 0 16px rgba(52, 211, 153, 0.5);
 }
 
+
+@media (max-width: 700px) {
+  .chapter-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .chapter-sticky {
+    position: static;
+  }
+  .timeline-cards {
+    padding-left: 24px;
+  }
+  .tl-dot {
+    left: -32px;
+  }
+  .tl-content::before {
+    width: 16px;
+    left: -16px;
+  }
+}
+
 @media (max-width: 700px) {
   .timeline-line { left: 20px; }
   .timeline-item,
   .timeline-item:nth-child(even) { flex-direction: column; padding-left: 50px; }
-  .tl-dot { left: 20px; }
   .tl-spacer { display: none; }
   .timeline-item:nth-child(even) .tl-content { text-align: left; }
   .timeline-item:nth-child(even) .tl-tags    { justify-content: flex-start; }
