@@ -18,11 +18,11 @@ def build_blog():
     nav_posts = load_partial("nav")           # Standard nav for articles (Back to Blog)
     nav_list = load_partial("nav-blog-list")  # Special nav for index (Back to Portfolio)
     footer = load_partial("footer")
-    sidebar_bio = load_partial("sidebar-bio")
     post_skeleton = load_partial("post-skeleton")
     list_skeleton = load_partial("list-skeleton")
     item_partial = load_partial("list-item")
     scripts = load_partial("scripts")
+    author_share = load_partial("author-share")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     all_posts_metadata = []
@@ -58,7 +58,7 @@ def build_blog():
             html_content=html_content,
             nav=nav_posts,
             footer=footer,
-            sidebar_bio=sidebar_bio
+            author_share=author_share,
         )
 
         (OUTPUT_DIR / f"{md_file.stem}.html").write_text(final_post, encoding="utf-8")

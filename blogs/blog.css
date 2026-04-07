@@ -2,6 +2,10 @@
    BLOG — Listing & Post Styles
    Extends the main style.css design system
 ============================================= */
+/* Adjust the 80px value to match your actual Navbar height + some padding */
+h2, h3, h4 {
+    scroll-margin-top: 100px; 
+}
 
 /* --- Blog Hero & Listing --- */
 .blog-hero {
@@ -207,7 +211,7 @@
 .post-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 140px 24px 80px;
+  padding: 140px 24px 0;
 }
 
 .post-header {
@@ -244,7 +248,8 @@
     display: grid;
     grid-template-columns: 1fr 280px; 
     gap: 4rem;
-    align-items: flex-start;
+    align-items: stretch; /* This makes the sidebar 'track' the full height of the blog */
+    position: relative;
 }
 
 /* --- Content Typography & Spacing --- */
@@ -286,19 +291,25 @@
 /* --- Sidebar System --- */
 .post-sidebar {
     width: 280px;
+    height:100%
 }
 
 .sticky-sidebar {
     position: sticky;
-    top: 2rem;
+    top: 100px;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    /* Ensure the sidebar itself doesn't become taller than the screen */
+    max-height: calc(100vh - 120px); 
+    overflow-y: auto;
+    scrollbar-width: none; /* Hides scrollbar on Firefox */
 }
-
+.sticky-sidebar::-webkit-scrollbar {
+    display: none; /* Hides scrollbar on Chrome/Safari */
+}
 .sidebar-section {
   padding-bottom: 25px;
-  border-bottom: 1px solid var(--border);
 }
 
 .sidebar-section h3 {
@@ -326,6 +337,46 @@
 }
 
 .toc-list a:hover { color: var(--accent1); transform: translateX(4px); }
+
+/* AUTHOR AND SHARE */
+/* --- Post Credits Styling --- */
+.post-end-divider {
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+.post-credits {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on very small screens */
+    gap: 3rem;
+    align-items: flex-start;
+    padding: 50px 100px 50px;
+}
+
+.credit-author {
+    flex: 2; /* Gives more room to the bio */
+    min-width: 280px;
+}
+
+.credit-share {
+    flex: 1; /* Keeps share section compact */
+    min-width: 200px;
+}
+
+.credit-title {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-mute);
+    margin-bottom: 1rem;
+}
+
+/* Share Button Alignment */
+.share-modern-wrapper {
+    display: flex;
+    gap: 12px;
+}
 
 .author-snippet {
   line-height: 1.6;
@@ -398,22 +449,20 @@
         display: none;
     }
 
-    .post-sidebar {
-        width: 100%;
-        margin-top: 4rem;
-        padding-top: 2rem;
-        border-top: 1px solid var(--border);
-    }
-
     .sticky-sidebar {
         position: static;
     }
 
     .post-title { font-size: 2.2rem; }
+
+    .post-credits{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 @media (max-width: 600px) {
   .blog-list-item { flex-direction: column; gap: 8px; }
   .blog-list-date { min-width: unset; }
-  .post-container { padding-top: 100px; }
+  .post-container { padding-top: 100px;}
 }
