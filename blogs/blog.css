@@ -41,6 +41,20 @@
     text-align: left;        /* Ensures text doesn't center itself */
 }
 
+.blog-list-arrow{
+    padding-right: 25px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.blog-list-arrow:hover {
+        color: var(--accent1);
+        transform: scale(1.2);
+        transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
 .blog-list-container {
     max-width: 900px;
     margin: 120px auto;
@@ -125,9 +139,7 @@
 .blog-list-item:first-child { border-top: 1px solid var(--border); }
 .blog-list-item:hover {
     background: rgba(45, 212, 191, 0.03); /* Subtle teal tint */
-    padding-left: 15px; /* Tiny slide effect */
     border-radius: 8px;
-    transform: translateX(4px); 
 }
 .blog-list-date {
   font-family: var(--font-mono);
