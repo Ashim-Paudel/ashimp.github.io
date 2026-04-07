@@ -65,12 +65,12 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // Wrap everything in a DOMContentLoaded listener to ensure the HTML is ready
 document.addEventListener('DOMContentLoaded', () => {
     const SKILLS = [
-        { label: 'Python',     pct: 85, icon: 'fab fa-python' },
-        { label: 'OpenSees',   pct: 80, icon: 'fas fa-project-diagram' },
-        { label: 'ETABS',      pct: 85, icon: 'fas fa-building' },
-        { label: 'AutoCAD',    pct: 95, icon: 'fas fa-drafting-compass' }, 
-        { label: 'MS Office',  pct: 85, icon: 'fas fa-table' },
-        { label: 'LaTeX',      pct: 99, icon: 'fas fa-file-alt' },
+      { label: 'Python',     pct: 85, icon: 'fab fa-python' },            // Standard Brand
+      { label: 'OpenSees',   pct: 80, icon: 'fas fa-project-diagram' },      // Computational Nodes
+      { label: 'ETABS',      pct: 85, icon: 'fas fa-city' },               // High-rise analysis
+      { label: 'AutoCAD',    pct: 95, icon: 'fas fa-drafting-compass' },     // Drafting precision
+      { label: 'MS Office',  pct: 90, icon: 'fas fa-chart-line' },         // Analytics/VBA
+      { label: 'LaTeX',      pct: 95, icon: 'fas fa-subscript' },          // Math typesetting
     ];
 
     const CIRCUMFERENCE = 2 * Math.PI * 36; 
