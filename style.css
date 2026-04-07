@@ -840,8 +840,12 @@ section {
 }
 
 .ring-wrap {
-  position: relative;
-  width: 90px; height: 90px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
 }
 .ring-wrap svg {
   width: 90px; height: 90px;
@@ -860,6 +864,27 @@ section {
   stroke-dasharray: 226;
   stroke-dashoffset: 226;
   transition: stroke-dashoffset 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ring-icon-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem; /* Adjust this to make icons bigger/smaller */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Optional: Make the icon slightly transparent or glow */
+.ring-icon-center i {
+    transition: all 0.3s ease;
+}
+
+.ring-item:hover .ring-icon-center i {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px currentColor);
 }
 
 .ring-percent {
