@@ -466,3 +466,147 @@ h2, h3, h4 {
   .blog-list-date { min-width: unset; }
   .post-container { padding-top: 100px;}
 }
+
+/* PAGE TABLE, LIST, IMAGES, STYLING */
+/* --- Technical Data Table Styling --- */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    background: rgba(255, 255, 255, 0.02); /* Subtle depth */
+    border: 1px solid var(--border);
+    border-radius: 8px; /* Note: Requires overflow hidden on table or parent */
+    overflow: hidden;
+}
+
+.post-content th {
+    background-color: rgba(45, 212, 191, 0.05); /* Very light Teal tint */
+    color: var(--accent1); /* Your Teal brand color */
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+}
+
+.post-content td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.5;
+}
+
+/* Zebra Striping for readability in long Loksewa notes */
+.post-content tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+/* Hover effect for interactive data tracking */
+.post-content tr:hover {
+    background-color: rgba(45, 212, 191, 0.03); 
+    color: var(--text);
+    transition: background 0.2s ease;
+}
+
+/* Responsive Table: Allow horizontal scroll on mobile */
+@media (max-width: 768px) {
+    .post-content {
+        overflow-x: auto;
+    }
+    .post-content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap; /* Prevents text wrapping in tight columns */
+    }
+}
+
+
+/* --- Global Post Image Styling --- */
+/* This handles standalone images in Markdown that aren't wrapped in <figure> */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2.5rem auto; 
+    /* Subtle shadow for depth without needing a border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+    border-radius: 8px; /* Consistent with your UI buttons/cards */
+}
+
+/* --- Professional Figure & Centered Caption System --- */
+figure {
+    margin: 3.5rem auto; /* Vertical breathing room between text and figures */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensures the container spans the full content width */
+}
+
+figure img {
+    /* Override standalone image margins to prevent double-spacing */
+    margin: 0 0 1.2rem 0 !important; 
+    max-width: 100%;
+    /* Ensures high-res engineering diagrams don't look blurry */
+    image-rendering: -webkit-optimize-contrast; 
+}
+
+figcaption {
+    font-size: 0.85rem;
+    font-family: var(--font-mono); /* Technical vibe for Civil Engineering notes */
+    color: var(--text-mute);
+    line-height: 1.6;
+    max-width: 85%; /* Slightly wider for longer technical descriptions */
+    margin: 0 auto;
+}
+
+/* Engineering-style Figure Prefix */
+figcaption::before {
+    content: "Fig: ";
+    color: var(--accent1); /* Your Teal brand color */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Blockquotes for Key Notes --- */
+.post-content blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.03); /* Subtle background lift */
+    border-left: 4px solid var(--accent1); /* Your Teal brand color */
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: var(--text);
+}
+
+.post-content blockquote p {
+    margin-bottom: 0; /* Keeps the spacing tight within the quote */
+}
+
+
+/* --- Ultra-Simple Gray Inline Code --- */
+.post-content :not(pre) > code {
+    font-family: var(--font-mono); /* Keeps the technical mono feel */
+    color: var(--text);            /* Uses your main text color for clarity */
+    background: rgba(255, 255, 255, 0.041); /* Very subtle light gray tint */
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    letter-spacing: -0.2px;        /* Tightens mono text for better flow */
+}
+/* --- Text Links --- */
+.post-content a {
+    color: var(--accent1);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45, 212, 191, 0.3); /* Faint underline */
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.post-content a:hover {
+    color: var(--text);
+    border-bottom-color: var(--accent1); /* Brightens on hover */
+}

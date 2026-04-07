@@ -13,9 +13,9 @@ In this blog, I’ll walk through the process of building [ashimp.com.np](https:
 
 ## The Necessity for Change
 My previous website had not been updated in four years. While it was functional, it lacked the professional edge required for a Civil Engineer in 2025. I needed a site that wasn't just a static resume, but a living resource hub with:
-* **Project Showcases:** To detail my work in structural analysis and water treatment.
-* **Student Resources:** A dedicated space for engineering students in Nepal to find guidance.
-* **Technical Documentation:** A blog system that could handle complex equations and code snippets.
+- **Project Showcases:** To detail my work in structural analysis and water treatment.
+- **Student Resources:** A dedicated space for engineering students in Nepal to find guidance.
+- **Technical Documentation:** A blog system that could handle complex equations and code snippets.
 
 ## The Process: From Brainstorming to Automation
 The rebuild started with a clear vision for design. I wanted a modern, dark-themed aesthetic with teal accents (`#2dd4bf`) to signify a blend of engineering and technology.
