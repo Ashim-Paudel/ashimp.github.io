@@ -56,19 +56,23 @@
 <p>I already had a minimalistic and well-explaining website which I built back in 2021 during my 1st semester vacation. It served its purpose for years, but after completing my Public Service Commission (PSC) exams and entering a new chapter of my career, I felt the necessity to create a more robust, professional platform to showcase my skills and experience.</p>
 <p>In this blog, I’ll walk through the process of building <a href="https://ashimp.com.np">ashimp.com.np</a> and the automation logic that makes it tick.</p>
 <h2>The Necessity for Change</h2>
-<p>My previous website had not been updated in four years. While it was functional, it lacked the professional edge required for a Civil Engineer in 2025. I needed a site that wasn't just a static resume, but a living resource hub with:
-- <strong>Project Showcases:</strong> To detail my work in structural analysis and water treatment.
-- <strong>Student Resources:</strong> A dedicated space for engineering students in Nepal to find guidance.
-- <strong>Technical Documentation:</strong> A blog system that could handle complex equations and code snippets.</p>
+<p>My previous website had not been updated in four years. While it was functional, it lacked the professional edge required for a Civil Engineer in 2025. I needed a site that wasn't just a static resume, but a living resource hub with:</p>
+<ul>
+<li><strong>Project Showcases:</strong> To detail my work in structural analysis and water treatment.</li>
+<li><strong>Student Resources:</strong> A dedicated space for engineering students in Nepal to find guidance.</li>
+<li><strong>Technical Documentation:</strong> A blog system that could handle complex equations and code snippets.</li>
+</ul>
 <h2>The Process: From Brainstorming to Automation</h2>
 <p>The rebuild started with a clear vision for design. I wanted a modern, dark-themed aesthetic with teal accents (<code>#2dd4bf</code>) to signify a blend of engineering and technology.</p>
 <h3>Design &amp; Layout Planning</h3>
 <p>I collaborated with Claude AI to decide on the design structure. To maximize efficiency and manage prompt limits, I used very short, targeted chat sessions. This allowed us to quickly finalize a modular "partial-based" layout without unnecessary token usage.</p>
 <h3>Building the "Engine" with Gemini</h3>
-<p>The most exciting part of this project was working with <strong>Gemini</strong> to build a semi-automated blog builder. Instead of manually editing HTML files, I developed a Python script that handles the heavy lifting:
-1. <strong>Markdown Conversion:</strong> It takes files like this one and converts them to HTML.
-2. <strong>Automatic Listing:</strong> It re-scans all posts and updates the main blog index page automatically.
-3. <strong>Dynamic Tagging:</strong> It generates individual tag pills with a gentle color gradient.</p>
+<p>The most exciting part of this project was working with <strong>Gemini</strong> to build a semi-automated blog builder. Instead of manually editing HTML files, I developed a Python script that handles the heavy lifting:</p>
+<ol>
+<li><strong>Markdown Conversion:</strong> It takes files like this one and converts them to HTML.</li>
+<li><strong>Automatic Listing:</strong> It re-scans all posts and updates the main blog index page automatically.</li>
+<li><strong>Dynamic Tagging:</strong> It generates individual tag pills with a gentle color gradient.</li>
+</ol>
 <div class="codehilite"><pre><span></span><code><span class="c1"># A look at the core builder logic</span>
 <span class="k">def</span> <span class="nf">build_blog</span><span class="p">():</span>
     <span class="c1"># Load HTML partials to keep the design modular</span>
@@ -108,10 +112,12 @@
 </tbody>
 </table>
 <h2>Website Summary &amp; Unique Features</h2>
-<p>The new portfolio is more than just a resume; it is a semi-automated engine designed for growth:
-* <strong>Math-Ready Articles:</strong> Integrated MathJax support allows me to display complex structural engineering formulas perfectly.
-* <strong>Zero-Maintenance Indexing:</strong> The blog listing page updates itself every time I run the script.
-* <strong>Responsive Navigation:</strong> The navigation bar intelligently updates its links depending on whether I'm on the main portfolio or the blog section.</p>
+<p>The new portfolio is more than just a resume; it is a semi-automated engine designed for growth:</p>
+<ul>
+<li><strong>Math-Ready Articles:</strong> Integrated MathJax support allows me to display complex structural engineering formulas perfectly.</li>
+<li><strong>Zero-Maintenance Indexing:</strong> The blog listing page updates itself every time I run the script.</li>
+<li><strong>Responsive Navigation:</strong> The navigation bar intelligently updates its links depending on whether I'm on the main portfolio or the blog section.</li>
+</ul>
 <h2>Conclusions</h2>
 <p>The journey of building this website has been incredibly rewarding. It wasn't just about writing code; it was about refining how I present my work as a Civil Engineer. Seeing the transition from a simple 2021 site to a semi-automated 2025 platform is a testament to the power of combining engineering principles with modern AI tools.</p>
 <p>I hope this new home serves as an inspiration and a valuable resource for others in the field. The journey was beautiful, and I am excited to see where this new platform takes me.</p>

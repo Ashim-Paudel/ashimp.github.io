@@ -12,11 +12,13 @@ In structural engineering, the ability to quickly and accurately calculate inter
 ## About the Module
 
 This module is designed to solve 2D beams by applying the three equations of static equilibrium:
+
 - $\sum F_x = 0$
 - $\sum F_y = 0$
 - $\sum M_{point} = 0$
 
 ### Supported Features
+
 - **Determinate 2D Beams:** Support for Point Loads, UDL, UVL, and Point Moments.
 - **Support Conditions:** Fixed, Hinged, or Roller supports.
 - **Internal Hinges:** Capable of handling beams with internal discontinuities.
@@ -25,6 +27,7 @@ This module is designed to solve 2D beams by applying the three equations of sta
 ## Sign Conventions
 
 To maintain consistency in structural analysis, the following conventions are used in the code:
+
 - **Positive X-axis:** Right-hand side.
 - **Positive Y-axis:** Upward direction.
 - **Positive Moment/Angle:** Counter-clockwise direction.

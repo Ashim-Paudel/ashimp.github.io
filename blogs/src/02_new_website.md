@@ -13,6 +13,7 @@ In this blog, I’ll walk through the process of building [ashimp.com.np](https:
 
 ## The Necessity for Change
 My previous website had not been updated in four years. While it was functional, it lacked the professional edge required for a Civil Engineer in 2025. I needed a site that wasn't just a static resume, but a living resource hub with:
+
 - **Project Showcases:** To detail my work in structural analysis and water treatment.
 - **Student Resources:** A dedicated space for engineering students in Nepal to find guidance.
 - **Technical Documentation:** A blog system that could handle complex equations and code snippets.
@@ -25,6 +26,7 @@ I collaborated with Claude AI to decide on the design structure. To maximize eff
 
 ### Building the "Engine" with Gemini
 The most exciting part of this project was working with **Gemini** to build a semi-automated blog builder. Instead of manually editing HTML files, I developed a Python script that handles the heavy lifting:
+
 1. **Markdown Conversion:** It takes files like this one and converts them to HTML.
 2. **Automatic Listing:** It re-scans all posts and updates the main blog index page automatically.
 3. **Dynamic Tagging:** It generates individual tag pills with a gentle color gradient.
@@ -52,6 +54,7 @@ Building a modern site from scratch required a blend of design and logic tools:
 
 ## Website Summary & Unique Features
 The new portfolio is more than just a resume; it is a semi-automated engine designed for growth:
+
 * **Math-Ready Articles:** Integrated MathJax support allows me to display complex structural engineering formulas perfectly.
 * **Zero-Maintenance Indexing:** The blog listing page updates itself every time I run the script.
 * **Responsive Navigation:** The navigation bar intelligently updates its links depending on whether I'm on the main portfolio or the blog section.

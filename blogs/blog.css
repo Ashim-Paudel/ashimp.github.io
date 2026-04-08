@@ -291,7 +291,6 @@ h2, h3, h4 {
 /* --- Sidebar System --- */
 .post-sidebar {
     width: 280px;
-    height:100%
 }
 
 .sticky-sidebar {
@@ -299,45 +298,86 @@ h2, h3, h4 {
     top: 100px;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    /* Ensure the sidebar itself doesn't become taller than the screen */
+    /* Removed gap: 2.5rem to allow the heading to sit flush against the scroll area */
     max-height: calc(100vh - 120px); 
-    overflow-y: auto;
-    scrollbar-width: none; /* Hides scrollbar on Firefox */
+    overflow: hidden; /* Prevent the entire sidebar from scrolling */
 }
-.sticky-sidebar::-webkit-scrollbar {
-    display: none; /* Hides scrollbar on Chrome/Safari */
-}
+
+/* Sidebar Section Container */
 .sidebar-section {
-  padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Important to contain the inner scroll */
+    max-height: 100%;
 }
 
 .sidebar-section h3 {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--text-mute);
-  margin-bottom: 15px;
+    flex-shrink: 0; /* Ensures the "Table of Contents" text never squishes or scrolls */
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-mute);
+    margin-bottom: 15px;
+    background-color: var(--bg); /* Keeps heading opaque so text hides behind it */
+    z-index: 10;
+    padding-bottom: 5px;
 }
 
+/* --- The Scrolling TOC List --- */
 .toc-list {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    overflow-y: auto; /* Enable scroll only here */
+    flex-grow: 1;    /* Take up the remaining sidebar height */
+    
+    /* Custom Scrollbar for a technical feel */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(45, 212, 191, 0.2) transparent;
+    mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        black 20px, 
+        black 100%
+    );
+    -webkit-mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        black 20px, 
+        black 100%
+    );
+
+    padding-top: 20px;  /* first element dont feels faded*/
+}
+
+/* Chrome/Safari Scrollbar Styling */
+.toc-list::-webkit-scrollbar {
+    width: 3px;
+}
+.toc-list::-webkit-scrollbar-thumb {
+    background: rgba(45, 212, 191, 0.2);
+    border-radius: 10px;
 }
 
 .toc-list li { margin-bottom: 12px; }
+
+/* --- Optimized TOC Hover Logic --- */
 
 .toc-list a {
   text-decoration: none;
   font-size: 0.88rem;
   color: var(--text-mute);
-  transition: all 0.2s;
+  transition: all 0.2s ease; /* Added 'ease' for smoother motion */
   display: block;
+  padding-left: 0; /* Starting point */
+  border-left: 2px solid transparent; /* Optional: preparation for a sleek indicator */
 }
 
-.toc-list a:hover { color: var(--accent1); transform: translateX(4px); }
-
+.toc-list a:hover { 
+  color: var(--accent1); 
+  /* Replace transform with padding-left */
+  padding-left: 8px; 
+  /* Optional: adds a small vertical line like a professional IDE */
+  border-left: 2px solid var(--accent1); 
+}
 /* AUTHOR AND SHARE */
 /* --- Post Credits Styling --- */
 .post-end-divider {

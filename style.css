@@ -7,10 +7,10 @@
   --bg3:       #18181f;
   --surface:   #1e1e28;
   --border:    rgba(255, 255, 255, 0.08);
-  --accent1: #2dd4bf;  /* teal primary */
-  --accent2: #38bdf8;  /* sky blue secondary */
-  --accent3: #818cf8;  /* soft violet */
-  --accent4: #34d399;  /* emerald */
+  --accent1:   #2dd4bf;  /* teal primary */
+  --accent2:   #38bdf8;  /* sky blue secondary */
+  --accent3:   #818cf8;  /* soft violet */
+  --accent4:   #34d399;  /* emerald */
   --text:      #f0f0f5;
   --text-dim:  #b0b0cc;
   --text-mute: #7878a0;
@@ -18,23 +18,7 @@
   --radius-lg: 20px;
   --font-head: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Inter', sans-serif;
---font-mono: 'JetBrains Mono', monospace;
-}
-
-[data-theme="light"] {
-  --bg:        #f8fafc;
-  --bg2:       #f1f5f9;
-  --bg3:       #e2e8f0;
-  --surface:   #ffffff;
-  --border:    rgba(0, 0, 0, 0.1);
-  --text:      #0f172a;
-  --text-dim:  #334155;
-  --text-mute: #64748b;
-}
-
-/* Global Transition for Theme Switching */
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 /* =============================================
@@ -58,7 +42,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Specific Class for Pages WITH Gridlines (e.g., your Home/Portfolio page) */
+/* Specific Class for Pages WITH Gridlines (e.g., Home/Portfolio page) */
 section.with-grid {
   background-image:
     linear-gradient(rgba(45, 212, 191, 0.05) 1px, transparent 1px),
@@ -275,16 +259,6 @@ section {
   position: relative;
   overflow: hidden;
 }
-
-/* .hero-grid-bg {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(45, 212, 191, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(45, 212, 191, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-} */
 
 .hero-blob {
   position: absolute;
