@@ -18,7 +18,23 @@
   --radius-lg: 20px;
   --font-head: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+--font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme="light"] {
+  --bg:        #f8fafc;
+  --bg2:       #f1f5f9;
+  --bg3:       #e2e8f0;
+  --surface:   #ffffff;
+  --border:    rgba(0, 0, 0, 0.1);
+  --text:      #0f172a;
+  --text-dim:  #334155;
+  --text-mute: #64748b;
+}
+
+/* Global Transition for Theme Switching */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* =============================================

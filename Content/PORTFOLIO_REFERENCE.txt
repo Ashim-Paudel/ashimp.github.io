@@ -373,16 +373,37 @@ SMALL CARDS:
 ================================================================================
 14. BLOG SECTION
 ================================================================================
-
-MOTTO: "Thinking out loud, one post at a time."
-STATUS: Coming soon placeholder
-  "Blog posts coming soon — civil engineering insights, Python projects,
-   learning resources for IOE students, and more."
-  CTA button: "Notify me when you publish" → links to #contact
-
-Blog card template (commented out in HTML, ready to uncomment):
+Blog card template:
   Structure: thumbnail | category tag | date | title | excerpt | "Read article →"
   Category colors: Engineering=teal, Code=blue, Life=yellow
+
+STATUS: COMPLETE — fully built and automated.
+
+BUILD SYSTEM:
+  - build_blog.py — Python script auto-generates blog posts from markdown files
+  - Source: blogs/src/*.md (frontmatter: title, date, tag, description)
+  - Output: blogs/posts/*.html (individual articles)
+  - Index: blogs/index.html (listing page, auto-updated)
+  - Partials: blogs/partials/ (nav, footer, post-skeleton, list-skeleton, 
+    list-item, author-share, scripts, head)
+
+STRUCTURE:
+  blogs/
+  ├── index.html        (blog listing page)
+  ├── blog.css
+  ├── blog-main.js
+  ├── partials/
+  └── posts/            (generated HTML articles)
+
+STUDENT RESOURCES:
+  - Added in blog index page nav bar
+  - Links to public Google Drive folder
+  - More fine-tuning later
+
+FINE-TUNING PENDING:
+  - Style consistency with main portfolio
+  - Student resources section details
+
 
 ================================================================================
 15. CONTACT SECTION
@@ -454,40 +475,100 @@ TERMINAL LINES (remove availability lines):
 19. KNOWN PENDING TASKS
 ================================================================================
 
-[ ] Remove "ashim --status" block from terminal in main.js
-[ ] Add icons above skill rings
-[ ] Fix grid lines visibility in non-hero sections
-    (change background: var(--bg/bg2) to background-color so body grid shows)
-[ ] Build timeline/experience section (not yet coded)
-[ ] Build research section (not yet coded)
-[ ] Build leadership hill section (not yet coded)
-[ ] Build achievements weighted grid (not yet coded)
-[ ] Add co-author names to research poster cards (Ashim to provide)
-[ ] Add poster links (Ashim to provide)
-[ ] Add poster photos (Ashim to provide)
-[ ] Update Portfolio v1.0 live link when migrated to github.io
-[ ] Add CV download link when ready
-[ ] Confirm 2×3 vs 3×2 ring grid layout (currently 3×2, discussed changing)
+COMPLETED SINCE LAST UPDATE:
+  [x] Timeline section — full redesign
+      - Two-column sticky layout (chapter label left, timeline cards right)
+      - Education chapter: teal accent, 3 entries, alternating not used
+      - Experience chapter: violet accent, 11 entries, single-side vertical
+      - Border-left line per chapter (gradient fade at bottom)
+      - Dot + horizontal connector (::before) links card to line
+      - Line starts 20px above first dot (symbolic)
+      - Mobile: stacks vertically, sticky disabled
+  [x] Blog section — fully built and automated (see section 14)
+  [x] Student resources — added to blog nav
+
+STILL PENDING:
+  [ ] Research section (not yet coded in index.html)
+  [ ] Leadership section (not yet coded)
+  [ ] Achievements — weighted grid overhaul
+  [ ] About section (currently no dedicated about section)
+  [ ] Add icons above skill rings
+  [ ] Remove "ashim --status" block from terminal
+  [ ] Add co-author names to research poster cards
+  [ ] Add poster links and photos
+  [ ] CV download link
+  [ ] Fine-tune blog styles + student resources section
+  [ ] Gallery/Visual Journey section (in pipeline)
+  [ ] IOE Student Resources section (in pipeline)
 
 ================================================================================
 20. FILE STRUCTURE
 ================================================================================
 
-your-site/
+my-site/
 ├── index.html
 ├── style.css
 ├── main.js
+├── build_blog.py
+├── CNAME
+├── project_hierarchy.txt
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── blogs/
+│   ├── index.html          (blog listing page)
+│   ├── blog.css
+│   ├── blog-main.js
+│   ├── partials/
+│   │   ├── author-share.html
+│   │   ├── footer.html
+│   │   ├── head.html
+│   │   ├── list-item.html
+│   │   ├── list-skeleton.html
+│   │   ├── nav-blog-list.html
+│   │   ├── nav.html
+│   │   ├── post-skeleton.html
+│   │   └── scripts.html
+│   ├── posts/
+│   │   ├── 01_python_beam_package.html
+│   │   ├── 02_new_website.html
+│   │   ├── 03_markdown_functionality_check.html
+│   │   └── 04_beam_analysis_package_documentation.html
+│   └── src/
+│       ├── 01_python_beam_package.md
+│       ├── 02_new_website.md
+│       ├── 03_markdown_functionality_check.md
+│       └── 04_beam_analysis_package_documentation.md
+│
+├── beamframe/
+│   ├── index.html
+│   ├── documentation.html
+│   └── images/
+│       ├── readme_example_1.png
+│       ├── readme_example_2.png
+│       └── readme_example_3.png
+│
+├── Content/
+│   ├── Content.docx
+│   ├── Content.txt
+│   ├── Final Content.docx
+│   ├── Final Content.txt
+│   └── PORTFOLIO_REFERENCE.txt
+│
 └── images/
     ├── Ashim_Paudel.jpg
-    ├── hiking.jpg
-    ├── drawing.jpg
-    ├── coding.jpg
-    ├── music.png
+    ├── Ashim_Paudel.png
     ├── icons/
-    │   ├── ashim-paudel-icon.svg
-    │   └── (skill icons to be added)
+    │   └── ashim-paudel-icon.svg
     └── projects/
-        └── (project images)
+        ├── beamframe.jfif
+        ├── bmi-img.png
+        ├── c-sewa.png
+        ├── password-manager.gif
+        ├── ping-pong.gif
+        └── snake_game.gif
 
 ================================================================================
 21. EDITING RULES (to save token/chat limit)
@@ -499,6 +580,71 @@ your-site/
 - Discuss and finalize before touching code
 - Start new chat with this reference file when limit approaches
 - Paste this file content at start of new chat for full context
+
+================================================================================
+22. NEW CHAT PROMPT (use this at start of every new chat)
+================================================================================
+
+Paste this entire block as your first message in a new chat:
+
+---
+
+Hi Claude. I am Ashim Paudel, a Civil Engineer from Nepal building my personal 
+portfolio website from scratch. We have been working on this together across 
+multiple chats. Please read ALL files in the project files section carefully 
+before responding — specifically:
+
+  - PORTFOLIO_REFERENCE.txt  (full project context, design system, content)
+  - index.html               (current main portfolio page)
+  - style.css                (all styling)
+  - main.js                  (all JavaScript)
+  - build_blog.py            (blog automation script)
+  - project_hierarchy.txt    (full folder structure)
+
+KEY THINGS TO KNOW:
+
+1. TECH STACK: Pure HTML + CSS + JS. No frameworks. No inline styles/scripts.
+   Separate files only: index.html, style.css, main.js.
+
+2. DESIGN SYSTEM: Dark theme. CSS variables in :root. Fonts: Plus Jakarta Sans
+   (headings), Inter (body), JetBrains Mono (mono). Accents: teal (#2dd4bf),
+   sky blue (#38bdf8), violet (#818cf8), emerald (#34d399).
+
+3. EDITING RULES — CRITICAL:
+   - NEVER regenerate full files
+   - NEVER use file tools to edit
+   - ALWAYS give edits as FIND/REPLACE snippets only
+   - One section per prompt
+   - Discuss and finalize layout BEFORE giving any code
+   - Keep responses SHORT — I am technical, skip explanations
+   - To save tokens: just say FIND: [first unique line] REPLACE WITH: [code]
+
+4. CURRENT STATE:
+   - DONE: Nav, Hero (with terminal), Timeline (two-column sticky layout with
+     Education + Experience chapters), Skills (rings + tags), Projects (filter
+     grid), Achievements, Contact, Footer
+   - BLOG: Fully built separately in /blogs/ with auto-build Python script
+   - PENDING: Research section, Leadership section, Achievements grid overhaul,
+     About section, skill ring icons, terminal cleanup, CV link, blog fine-tuning,
+     student resources section, gallery section
+
+5. TIMELINE SECTION (recently redesigned):
+   - Two-column grid: sticky chapter label left (220px), timeline cards right
+   - Education: teal accent, border-left gradient line, dot + ::before connector
+   - Experience: violet accent, same structure
+   - Mobile: single column stack
+
+6. BLOG (/blogs/):
+   - Auto-built via build_blog.py from markdown source files
+   - Partials system for nav, footer, skeletons
+   - Student resources in blog nav (fine-tuning pending)
+
+7. DOMAIN: ashimp.com.np
+   Old site archived at: ashim-paudel.github.io
+
+Reply with "Understood" and ask me ONE question about what to work on next.
+
+---
 
 ================================================================================
 END OF REFERENCE

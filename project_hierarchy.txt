@@ -1,0 +1,74 @@
+Folder PATH listing
+Volume serial number is D0BF-D609
+C:.
+|   build_blog.py
+|   CNAME
+|   index.html
+|   main.js
+|   project_hierarchy.txt
+|   style.css
+|   
++---.github
+|   \---workflows
+|           deploy.yml
+|           
++---beamframe
+|   |   documentation.html
+|   |   index.html
+|   |   
+|   \---images
+|           readme_example_1.png
+|           readme_example_2.png
+|           readme_example_3.png
+|           
++---blogs
+|   |   blog-main.js
+|   |   blog.css
+|   |   index.html
+|   |   
+|   +---partials
+|   |       author-share.html
+|   |       footer.html
+|   |       head.html
+|   |       list-item.html
+|   |       list-skeleton.html
+|   |       nav-blog-list.html
+|   |       nav.html
+|   |       post-skeleton.html
+|   |       scripts.html
+|   |       
+|   +---posts
+|   |       01_python_beam_package.html
+|   |       02_new_website.html
+|   |       03_markdown_functionality_check.html
+|   |       04_beam_analysis_package_documentation.html
+|   |       
+|   \---src
+|           01_python_beam_package.md
+|           02_new_website.md
+|           03_markdown_functionality_check.md
+|           04_beam_analysis_package_documentation.md
+|           
++---Content
+|       Content.docx
+|       Content.txt
+|       Final Content.docx
+|       Final Content.txt
+|       PORTFOLIO_REFERENCE.txt
+|       
+\---images
+    |   Ashim_Paudel - Copy.jpg
+    |   Ashim_Paudel.jpg
+    |   Ashim_Paudel.png
+    |   
+    +---icons
+    |       ashim-paudel-icon.svg
+    |       
+    \---projects
+            beamframe.jfif
+            bmi-img.png
+            c-sewa.png
+            password-manager.gif
+            ping-pong.gif
+            snake_game.gif
+            
