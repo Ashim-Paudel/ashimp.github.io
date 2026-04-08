@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // =============================================
 // 5. PROJECT FILTER
 // =============================================
-const filterButtons = document.querySelectorAll('.filter-btn');
+const filterButtons = document.querySelectorAll('.projects-filter .filter-btn');
 const projectCards  = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(btn => {
@@ -242,3 +242,25 @@ async function fetchGithubStars() {
 }
 
 fetchGithubStars();
+
+// =============================================
+// ACHIEVEMENTS FILTER
+// =============================================
+const achFilterBtns = document.querySelectorAll('.achievements-filter button');
+const achCards      = document.querySelectorAll('.ach-card');
+
+achFilterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.getAttribute('data-filter');
+
+    achFilterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    achCards.forEach(card => {
+      const cat = card.getAttribute('data-cat') || '';
+      const visible = filter === 'all' || cat === filter;
+      card.setAttribute('data-hidden', visible ? 'false' : 'true');
+      card.style.display = visible ? '' : 'none';
+    });
+  });
+});

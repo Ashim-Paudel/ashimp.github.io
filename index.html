@@ -407,12 +407,12 @@
     <p class="section-sub reveal">Built to solve. Shared to contribute.</p>
 
     <div class="projects-filter reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="structural-design">Structural Design</button>
-      <button class="filter-btn" data-filter="python">Python</button>
-      <button class="filter-btn" data-filter="opensources">OpenSource Projects</button>
-      <button class="filter-btn" data-filter="web">Web</button>
-      <button class="filter-btn" data-filter="c">C</button>
+      <button type="button" class="filter-btn active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="structural-design">Structural Design</button>
+      <button type="button" class="filter-btn" data-filter="python">Python</button>
+      <button type="button" class="filter-btn" data-filter="opensources">OpenSource Projects</button>
+      <button type="button" class="filter-btn" data-filter="web">Web</button>
+      <button type="button" class="filter-btn" data-filter="c">C</button>
     </div>
 
     <div class="projects-grid">
@@ -571,43 +571,155 @@
   <section id="achievements">
     <div class="section-label reveal">Recognition</div>
     <h2 class="section-title reveal">Achievements &<br>Honours.</h2>
+    <p class="section-sub reveal">A record of moments that pushed me further.</p>
+
+    <div class="achievements-filter reveal">
+      <button type="button" class="filter-btn active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="exam">Exams</button>
+      <button type="button" class="filter-btn" data-filter="competition">Competitions</button>
+      <button type="button" class="filter-btn" data-filter="scholarship">Scholarships</button>
+      <button type="button" class="filter-btn" data-filter="award">Awards</button>
+    </div>
 
     <div class="achievements-grid">
-      <div class="ach-card reveal">
-        <div class="ach-icon red">🥇</div>
-        <div>
-          <div class="ach-title">SEE District Topper</div>
-          <div class="ach-desc">Achieved the highest marks in the district in the Secondary Education Examinations, placing first among all students in Nawalpur.</div>
-          <div class="ach-year">2018</div>
+
+      <div class="ach-card reveal" data-cat="exam" data-featured="true">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-teal">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <span class="ach-featured-badge">Featured</span>
+        </div>
+        <div class="ach-title">Rank #1 — Federal PSC</div>
+        <div class="ach-desc">Federal Public Service Commission Examination, Government of Nepal</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2026</span>
+          <span class="ach-tag">Govt. of Nepal</span>
+          <span class="ach-tag">Civil Engineering</span>
         </div>
       </div>
 
-      <div class="ach-card reveal">
-        <div class="ach-icon yellow">🎓</div>
-        <div>
-          <div class="ach-title">IOE Entrance — Pulchowk Campus</div>
-          <div class="ach-desc">Qualified for the highly competitive IOE Engineering Entrance Examination and secured a seat at the most prestigious engineering campus in Nepal.</div>
-          <div class="ach-year">2020</div>
+      <div class="ach-card reveal" data-cat="exam" data-featured="true">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-teal">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <span class="ach-featured-badge">Featured</span>
+        </div>
+        <div class="ach-title">Rank #1 — Gandaki PSC</div>
+        <div class="ach-desc">Gandaki Province Public Service Commission Examination</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2026</span>
+          <span class="ach-tag">Gandaki Province</span>
+          <span class="ach-tag">Civil Engineering</span>
         </div>
       </div>
 
-      <div class="ach-card reveal">
-        <div class="ach-icon cyan">🐍</div>
-        <div>
-          <div class="ach-title">Open Source Contributor</div>
-          <div class="ach-desc">Published the Python Beam Analysis Library on GitHub — an engineering tool actively available to structural engineering students and professionals.</div>
-          <div class="ach-year">2021</div>
+      <div class="ach-card reveal" data-cat="competition">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-sky">
+            <i class="fas fa-medal"></i>
+          </div>
+        </div>
+        <div class="ach-title">Winner — Aron Engineering Competition</div>
+        <div class="ach-desc">Sustainable Innovative Solutions in Civil Engineering</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2026</span>
+          <span class="ach-tag">Competition</span>
+          <span class="ach-tag">Sustainable Engg</span>
         </div>
       </div>
 
-      <div class="ach-card reveal">
-        <div class="ach-icon violet">🏗️</div>
-        <div>
-          <div class="ach-title">B.E. Civil Engineering Graduate</div>
-          <div class="ach-desc">Successfully graduated with a Bachelor of Engineering in Civil Engineering from IOE Pulchowk Campus, one of Nepal's top engineering institutions.</div>
-          <div class="ach-year">2024</div>
+      <div class="ach-card reveal" data-cat="competition">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-violet">
+            <i class="fas fa-award"></i>
+          </div>
+        </div>
+        <div class="ach-title">Runner-Up — Structural Failure Case Study</div>
+        <div class="ach-desc">Structural Failure Case Study Analysis Competition</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2025</span>
+          <span class="ach-tag">Competition</span>
+          <span class="ach-tag">Structural</span>
         </div>
       </div>
+
+      <div class="ach-card reveal" data-cat="award">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-sky">
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="ach-title">Best Club President — Leo District 325E</div>
+        <div class="ach-desc">Recognised for outstanding leadership and community service</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2024</span>
+          <span class="ach-tag">Leo District 325E</span>
+          <span class="ach-tag">Leadership</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal" data-cat="exam">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-violet">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+        </div>
+        <div class="ach-title">Rank #15 — IOE Entrance Examination</div>
+        <div class="ach-desc">Secured full merit scholarship at IOE Pulchowk Campus</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2020</span>
+          <span class="ach-tag">IOE</span>
+          <span class="ach-tag">Academic</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal" data-cat="scholarship">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-emerald">
+            <i class="fas fa-certificate"></i>
+          </div>
+        </div>
+        <div class="ach-title">Golden Jubilee Scholarship</div>
+        <div class="ach-desc">Merit-based scholarship awarded by the Indian Embassy in Nepal</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2021</span>
+          <span class="ach-tag">Indian Embassy</span>
+          <span class="ach-tag">Scholarship</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal" data-cat="scholarship">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-emerald">
+            <i class="fas fa-certificate"></i>
+          </div>
+        </div>
+        <div class="ach-title">Mahatma Gandhi Scholarship</div>
+        <div class="ach-desc">Merit-based scholarship awarded by the Indian Embassy in Nepal</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2018</span>
+          <span class="ach-tag">Indian Embassy</span>
+          <span class="ach-tag">Scholarship</span>
+        </div>
+      </div>
+
+      <div class="ach-card reveal" data-cat="exam">
+        <div class="ach-card-top">
+          <div class="ach-icon-wrap ach-teal">
+            <i class="fas fa-ranking-star"></i>
+          </div>
+        </div>
+        <div class="ach-title">SEE District Topper — Nawalparasi</div>
+        <div class="ach-desc">Achieved highest marks in the district in Secondary Education Examinations</div>
+        <div class="ach-tags">
+          <span class="ach-tag">2018</span>
+          <span class="ach-tag">Academic</span>
+          <span class="ach-tag">Recognition</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
