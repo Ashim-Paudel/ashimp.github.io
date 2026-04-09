@@ -1,3 +1,10 @@
+---
+title: Langtang Essentials
+date: Apr 2026
+tag: [Trek, Lifestyle, Nepal]
+description: Langtang Itenaries
+---
+
 ## Gadi (Machapokhari - Syafrubesi) 
 
 - Destination - Syafru besi
@@ -55,27 +62,26 @@
 - tato pani pani jane
 
 ## 6th Day - Syafrubesi to Ktm
-
-
-------------
+This is just a bus ride back to ktm
 
 ## Things to remember:
+
+### Clothings
 
 - Tshirt and Track (Normal Track) (first 2 days) (3 jodi)
 - Thermal, Sweater, Tshirt, Jacket, Window
 - Socks.. normal and bakloo
 - Panja Fur wala compulsory
 - Topi, Hat, Chasma, GhatiChopne, 
+
+### Self Care
+
 - Lotion, Sunscreen, Moisturizer
-
-- Medicines -
-- Altitude, JeevanJal, Diarrohea, Paracetamol, Gastric, Painkiller
-
-
 - Chocolates, Snacks, DryFruits
-
+- **Medicines**
+  * Altitude, JeevanJal, Diarrohea, Paracetamol, Gastric, Painkiller
 - Thermos
-- 
+
 
 
 

@@ -1028,6 +1028,15 @@ section {
   line-height: 1.5;
 }
 
+.tl-external-link {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: var(--text-mute);
+  font-size: 0.75rem;
+  transition: color 0.2s;
+}
+.tl-external-link:hover { color: var(--accent1); }
 /* =============================================
    SKILLS
 ============================================= */
@@ -1247,7 +1256,12 @@ section {
 .proj-color-5 { background: linear-gradient(135deg, #0a1a12, #1a3d28); }
 .proj-color-6 { background: linear-gradient(135deg, #1a0f0a, #3d281a); }
 
-.project-body { padding: 20px 24px 24px; }
+.project-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 180px);
+}
 
 .project-type {
   font-family: var(--font-mono);
@@ -1268,6 +1282,7 @@ section {
   color: var(--text-dim);
   margin-bottom: 16px;
   line-height: 1.6;
+  flex: 1;
 }
 
 .project-footer {
@@ -1691,6 +1706,15 @@ section {
   border: 1px solid var(--border);
 }
 
+.ach-external-link {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: var(--text-mute);
+  font-size: 0.75rem;
+  transition: color 0.2s;
+}
+.ach-external-link:hover { color: var(--accent1); }
 
 /* =============================================
    BLOG

@@ -19,7 +19,7 @@ def build_blog():
     nav_list = load_partial("nav-blog-list")  # Special nav for index (Back to Portfolio)
     footer = load_partial("footer")
     post_skeleton = load_partial("post-skeleton")
-    list_skeleton = load_partial("list-skeleton")
+    index_skeleton = load_partial("index-skeleton")
     item_partial = load_partial("list-item")
     scripts = load_partial("scripts")
     author_share = load_partial("author-share")
@@ -88,7 +88,7 @@ def build_blog():
             slug=post['slug']
         )
 
-        final_index_page = list_skeleton.format(
+        final_index_page = index_skeleton.format(
         nav=nav_list,
         footer=footer,
         post_cards=post_cards_html,
