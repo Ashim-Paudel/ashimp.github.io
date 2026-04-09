@@ -895,14 +895,22 @@ section {
     position: static;
   }
   .timeline-cards {
-    padding-left: 24px;
+    padding-left: 20px;
   }
   .tl-dot {
-    left: -32px;
+    left: -26px;
+    width: 12px;
+    height: 12px;
+    top: 16px;
+  }
+  .leo-dot-featured {
+    left: -28px;
+    width: 16px;
+    height: 16px;
+    top: 16px;
   }
   .tl-content::before {
-    width: 16px;
-    left: -16px;
+    display: none;
   }
 }
 
@@ -1307,6 +1315,13 @@ section {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.project-thumb i {
+  font-size: 2.5rem;
+  color: rgba(255,255,255,0.7);
+  position: relative;
+  z-index: 1;
 }
 
 /* =============================================
