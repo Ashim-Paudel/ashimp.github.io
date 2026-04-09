@@ -290,9 +290,18 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: start;
   position: relative;
   z-index: 1;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-right {
+  position: sticky;
+  top: 80px;
 }
 
 @media (max-width: 900px) {
@@ -494,7 +503,7 @@ section {
 /* Scroll indicator */
 .hero-scroll-indicator {
   position: absolute;
-  bottom: 40px;
+  bottom: 60px;
   left: clamp(20px, 8vw, 120px);
   display: flex;
   align-items: center;
@@ -530,6 +539,119 @@ section {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* =============================================
+   ABOUT
+============================================= */
+#about { background: var(--bg2); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.about-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.about-img-wrap img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  display: block;
+  border: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+  filter: grayscale(15%);
+  transition: filter 0.3s;
+}
+.about-img-wrap:hover img { filter: grayscale(0%); }
+.about-img-wrap::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: -10px;
+  width: 100%; height: 100%;
+  border: 2px solid var(--accent1);
+  border-radius: var(--radius-lg);
+  opacity: 0.25;
+  z-index: 0;
+}
+.about-img-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; right: -10px;
+  width: 100%; height: 100%;
+  border: 2px solid var(--accent3);
+  border-radius: var(--radius-lg);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.about-bio {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 20px 0 32px;
+}
+
+.about-interests {
+  display: inline-flex;
+  width: fit-content;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.interest-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 56px;
+}
+
+.interest-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(45,212,191,0.08);
+  border: 1px solid rgba(45,212,191,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--accent1);
+  transition: background 0.2s, transform 0.2s;
+}
+.interest-item:hover .interest-icon {
+  background: rgba(45,212,191,0.15);
+  transform: translateY(-2px);
+}
+
+.interest-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-mute);
+  letter-spacing: 0.05em;
+}
+
+.about-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
 /* =============================================
    TIMELINE
@@ -793,6 +915,110 @@ section {
   .timeline-item:nth-child(even) .tl-tags    { justify-content: flex-start; }
 }
 
+/* Leo / Community chapter */
+.leo-accent-line { background: var(--accent4); }
+
+.leo-cards {
+  border-left: 2px solid var(--accent4);
+  border-image: linear-gradient(to bottom, var(--accent4), rgba(52,211,153,0.1)) 1;
+}
+
+.leo-dot {
+  background: var(--surface);
+  border: 2px solid var(--accent4);
+  box-shadow: 0 0 0 1px var(--accent4), 0 0 12px rgba(52,211,153,0.3);
+}
+
+.leo-dot-featured {
+  background: var(--accent4);
+  box-shadow: 0 0 0 1px var(--accent4), 0 0 16px rgba(52,211,153,0.5);
+  width: 16px;
+  height: 16px;
+  left: -41px;
+  top: 12px;
+}
+
+.leo-content { transition: border-color 0.3s, transform 0.3s; }
+.leo-content:hover { border-color: rgba(52,211,153,0.25); }
+
+.leo-content-featured {
+  border-color: rgba(52,211,153,0.35);
+  box-shadow: 0 0 0 1px rgba(52,211,153,0.1),
+              0 8px 32px rgba(52,211,153,0.08);
+}
+.leo-content-featured:hover { border-color: rgba(52,211,153,0.6); }
+
+.leo-year { color: var(--accent4) !important; }
+
+.tag-leo {
+  background: rgba(52,211,153,0.1);
+  color: var(--accent4);
+  border-color: rgba(52,211,153,0.2);
+}
+
+.tl-desc {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Initiatives strip */
+.initiatives-strip {
+  margin-top: 8px;
+  padding: 20px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.initiatives-strip-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-bottom: 16px;
+}
+
+.initiatives-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.initiative-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.initiative-pill-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.initiative-pill-name {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.initiative-pill-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
 
 /* =============================================
    SKILLS
@@ -1138,6 +1364,208 @@ section {
   border-radius: 100px;
   border: 1px solid var(--border);
 }
+
+/* =============================================
+   RESEARCH
+============================================= */
+#research { background: var(--bg2); }
+
+.research-zone-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.research-zone-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.research-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.research-card:hover {
+  border-color: rgba(45, 212, 191, 0.25);
+  transform: translateX(4px);
+}
+
+.inprogress-card {
+  opacity: 0.5;
+  border-style: dashed;
+}
+.inprogress-card:hover {
+  opacity: 0.7;
+  transform: none;
+}
+
+.placeholder-card {
+  opacity: 0.6;
+  border-style: dashed;
+}
+
+.research-card-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.research-badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.08em;
+}
+.badge-poster   { background: rgba(45,212,191,0.1);  color: var(--accent1); border: 1px solid rgba(45,212,191,0.2); }
+.badge-paper    { background: rgba(56,189,248,0.1);  color: var(--accent2); border: 1px solid rgba(56,189,248,0.2); }
+.badge-progress { background: rgba(129,140,248,0.1); color: var(--accent3); border: 1px solid rgba(129,140,248,0.2); }
+
+.research-year {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-mute);
+}
+
+.research-topic {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.topic-geo     { background: rgba(52,211,153,0.1);  color: var(--accent4); border: 1px solid rgba(52,211,153,0.2); }
+.topic-seismic { background: rgba(129,140,248,0.1); color: var(--accent3); border: 1px solid rgba(129,140,248,0.2); }
+
+.research-status {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.status-review    { background: rgba(255,204,0,0.1); color: #fbbf24; border: 1px solid rgba(255,204,0,0.2); }
+.status-published { background: rgba(45,212,191,0.1); color: var(--accent1); border: 1px solid rgba(45,212,191,0.2); }
+
+.research-title {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.research-authors {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+.author-main {
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent1);
+  text-underline-offset: 3px;
+}
+
+.research-venue {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.research-journal {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.research-citation {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-mute);
+}
+
+.research-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.research-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent1);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+.research-link:hover { color: var(--accent2); }
+
+.research-contribution {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: rgba(45,212,191,0.05);
+  border: 1px solid rgba(45,212,191,0.15);
+  border-radius: var(--radius);
+  margin: 32px 0;
+}
+
+.contrib-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: rgba(45,212,191,0.1);
+  color: var(--accent1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.contrib-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contrib-role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent1);
+  letter-spacing: 0.08em;
+}
+
+.contrib-event {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
 
 /* =============================================
    ACHIEVEMENTS
