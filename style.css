@@ -66,6 +66,14 @@ body::before {
   opacity: 0.4;
 }
 
+.external-link {
+  color: var(--text-mute);
+  font-size: 0.75rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.external-link:hover { color: var(--accent1); }
+
 /* =============================================
    NAVIGATION
 ============================================= */
@@ -1862,8 +1870,8 @@ section {
   transition: 0.3s;
 }
 .contact-channel:hover {
-  color: var(--text);
-  border-color: rgba(255, 60, 95, 0.3);
+  color: var(--accent3);
+  border-color: rgba(45, 212, 191, 0.25);
   transform: translateX(4px);
 }
 
@@ -1876,8 +1884,7 @@ section {
   font-size: 1rem;
   flex-shrink: 0;
 }
-.ch-red    { background: rgba(255, 60, 95, 0.12);  color: var(--accent1); }
-.ch-cyan   { background: rgba(0, 229, 255, 0.12);  color: var(--accent3); }
+.ch-cyan   { background: rgba(0, 229, 255, 0.055);  color: var(--accent3); }
 .ch-violet { background: rgba(124, 58, 237, 0.12); color: #a78bfa; }
 
 .ch-label {
