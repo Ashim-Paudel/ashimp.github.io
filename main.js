@@ -264,3 +264,6 @@ achFilterBtns.forEach(btn => {
     });
   });
 });
+
+document.querySelector('.footer-left').innerHTML = 
+  `<i class="fas fa-copyright"></i> ${new Date().getFullYear()} Ashim Paudel · Designed & Built by Ashim Paudel`;
