@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am currently working on my new portfolio website | Ashim Paudel</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../blog.css">
+
+    <link rel="icon" href="../../images/icons/blogs-favicon.svg" type="image/svg+xml">
+
+    <script>
+        // We use window["MathJax"] to avoid some linter warnings
+        window["MathJax"] = {
+            tex: { 
+            inlineMath: [['$', '$'], ['\\(', '\\)']], 
+            displayMath: [['$$', '$$']] 
+            },
+            options: { 
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] 
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+    <!-- NAV -->
+<nav>
+  <a href="../../index.html" class="nav-logo">A<span>.</span>Paudel</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">← Back to Blog</a></li>
+    <li><a href="#">Students Resources</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+    <article class="post-container">
+        <header class="post-header">
+            <div class="post-meta">
+                <span class="post-date">Apr 2026</span>
+                <div class="blog-list-tags">
+                    <span class="blog-tag">HOBBY</span><span class="blog-tag">HTML/CSS</span><span class="blog-tag">PYTHON</span><span class="blog-tag">AUTOMATION</span>
+                </div>
+            </div>
+            <h1 class="post-title">I am currently working on my new portfolio website</h1>
+            <p class="post-description">A deep dive into why I rebuilt my professional presence from scratch and how I used AI-driven automation to do it.</p>
+        </header>
+
+        <div class="post-layout-grid">
+            <main class="post-content">
+                <p>Transitioning to a Modern Engineering Portfolio: A Journey of Code and Design</p>
+<h2>Introduction</h2>
+<p>I already had a minimalistic and well-explaining website which I built back in 2021 during my 1st semester vacation. It served its purpose for years, but after completing my Public Service Commission (PSC) exams and entering a new chapter of my career, I felt the necessity to create a more robust, professional platform to showcase my skills and experience.</p>
+<p>In this blog, I’ll walk through the process of building <a href="https://ashimp.com.np">ashimp.com.np</a> and the automation logic that makes it tick.</p>
+<h2>The Necessity for Change</h2>
+<p>My previous website had not been updated in four years. While it was functional, it lacked the professional edge required for a Civil Engineer in 2025. I needed a site that wasn't just a static resume, but a living resource hub with:</p>
+<ul>
+<li><strong>Project Showcases:</strong> To detail my work in structural analysis and water treatment.</li>
+<li><strong>Student Resources:</strong> A dedicated space for engineering students in Nepal to find guidance.</li>
+<li><strong>Technical Documentation:</strong> A blog system that could handle complex equations and code snippets.</li>
+</ul>
+<h2>The Process: From Brainstorming to Automation</h2>
+<p>The rebuild started with a clear vision for design. I wanted a modern, dark-themed aesthetic with teal accents (<code>#2dd4bf</code>) to signify a blend of engineering and technology.</p>
+<h3>Design &amp; Layout Planning</h3>
+<p>I collaborated with Claude AI to decide on the design structure. To maximize efficiency and manage prompt limits, I used very short, targeted chat sessions. This allowed us to quickly finalize a modular "partial-based" layout without unnecessary token usage.</p>
+<h3>Building the "Engine" with Gemini</h3>
+<p>The most exciting part of this project was working with <strong>Gemini</strong> to build a semi-automated blog builder. Instead of manually editing HTML files, I developed a Python script that handles the heavy lifting:</p>
+<ol>
+<li><strong>Markdown Conversion:</strong> It takes files like this one and converts them to HTML.</li>
+<li><strong>Automatic Listing:</strong> It re-scans all posts and updates the main blog index page automatically.</li>
+<li><strong>Dynamic Tagging:</strong> It generates individual tag pills with a gentle color gradient.</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="c1"># A look at the core builder logic</span>
+<span class="k">def</span> <span class="nf">build_blog</span><span class="p">():</span>
+    <span class="c1"># Load HTML partials to keep the design modular</span>
+    <span class="n">nav</span> <span class="o">=</span> <span class="n">load_partial</span><span class="p">(</span><span class="s2">&quot;nav&quot;</span><span class="p">)</span>
+    <span class="n">skeleton</span> <span class="o">=</span> <span class="n">load_partial</span><span class="p">(</span><span class="s2">&quot;post-skeleton&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Process metadata and convert Markdown content</span>
+    <span class="n">html_content</span> <span class="o">=</span> <span class="n">markdown</span><span class="o">.</span><span class="n">markdown</span><span class="p">(</span><span class="n">md_body</span><span class="p">,</span> <span class="n">extensions</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;extra&#39;</span><span class="p">,</span> <span class="s1">&#39;codehilite&#39;</span><span class="p">,</span> <span class="s1">&#39;toc&#39;</span><span class="p">])</span>
+</code></pre></div>
+
+<h2>Tools Used</h2>
+<p>Building a modern site from scratch required a blend of design and logic tools:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Languages</strong></td>
+<td style="text-align: left;">HTML5, CSS3, JavaScript (ES6), Python</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Libraries</strong></td>
+<td style="text-align: left;">MathJax (for Engineering formulas), FontAwesome</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>AI Assistants</strong></td>
+<td style="text-align: left;">Claude (Design/Layout), Gemini (Automation/Logic)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Deployment</strong></td>
+<td style="text-align: left;">GitHub Pages &amp; Custom Domain Management</td>
+</tr>
+</tbody>
+</table>
+<h2>Website Summary &amp; Unique Features</h2>
+<p>The new portfolio is more than just a resume; it is a semi-automated engine designed for growth:</p>
+<ul>
+<li><strong>Math-Ready Articles:</strong> Integrated MathJax support allows me to display complex structural engineering formulas perfectly.</li>
+<li><strong>Zero-Maintenance Indexing:</strong> The blog listing page updates itself every time I run the script.</li>
+<li><strong>Responsive Navigation:</strong> The navigation bar intelligently updates its links depending on whether I'm on the main portfolio or the blog section.</li>
+</ul>
+<h2>Conclusions</h2>
+<p>The journey of building this website has been incredibly rewarding. It wasn't just about writing code; it was about refining how I present my work as a Civil Engineer. Seeing the transition from a simple 2021 site to a semi-automated 2025 platform is a testament to the power of combining engineering principles with modern AI tools.</p>
+<p>I hope this new home serves as an inspiration and a valuable resource for others in the field. The journey was beautiful, and I am excited to see where this new platform takes me.</p>
+            </main>
+
+            <aside class="post-sidebar">
+                <div class="sticky-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Table of Contents</h3>
+                        <ul class="toc-list" id="toc-list"></ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </article>
+    <hr class="post-end-divider">
+
+<section class="post-credits">
+    <div class="credit-author">
+        <h3 class="credit-title">About the Author</h3>
+        <p class="author-snippet">
+            <strong>Ashim Paudel</strong><br>
+            Civil Engineer & Programmer.<br>
+            Building tools to bridge the gap between structures and code.
+        </p>
+    </div>
+
+    <div class="credit-share">
+        <h3 class="credit-title">Spread the word</h3>
+        <div class="share-modern-wrapper">
+            <button id="native-share-btn" class="share-trigger" title="Open Share Menu">
+                <div class="share-icon-box">
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+                <span>Share Article</span>
+            </button>
+            
+            <button id="copy-link-btn" class="share-copy-only" title="Copy Link">
+                <i class="fa-regular fa-copy"></i>
+            </button>
+        </div>
+    </div>
+</section>
+    <footer>
+  <div class="footer-left">
+    © 2026 Ashim Paudel · Designed & Built from scratch in Nepal
+  </div>
+  <div class="footer-social">
+    <a href="https://github.com/Ashim-Paudel" target="_blank" class="social-link">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/ashim-paudel-659949225" target="_blank" class="social-link">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.facebook.com/ashim.the.curious/" target="_blank" class="social-link">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/ashim_paudel_/" target="_blank" class="social-link">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Hamburger toggle for mobile consistency
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  }
+</script>
+
+    <script src="../blog-main.js"></script>
+</body>
+</html>
