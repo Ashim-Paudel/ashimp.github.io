@@ -174,7 +174,7 @@ const terminalLines = [
   { prompt: '',   key: 'Aka        ', val: ': theCuriousAshim', delay: 100 },
   { prompt: '',   key: 'Degree      ', val: ': B.E. Civil Engineering, IOE', delay: 100 },
   { prompt: '',   key: 'Aggregate   ', val: ': 84.60% — Rank 6', delay: 100 },
-  { prompt: '',   key: 'PSC Federal ', val: ': Rank #1 (2026)', delay: 100 },
+  // { prompt: '',   key: 'PSC Federal ', val: ': Rank #1 (2026)', delay: 100 },
   { prompt: '',   key: 'PSC Gandaki ', val: ': Rank #1 (2026)', delay: 100 },
   { prompt: '',   text: '', delay: 200 },
   { prompt: '$ ', text: 'ashim --skills', delay: 400 },
