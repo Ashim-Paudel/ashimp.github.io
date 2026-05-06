@@ -7,7 +7,7 @@ description: A walkthrough of the Python Beam Analysis library — the problem i
 
 # Introduction
 
-In structural engineering, the ability to quickly and accurately calculate internal forces in a beam is fundamental. While professional software like **ETABS** or **AutoCAD** is powerful for large-scale projects, I wanted to create a lightweight, open-source Python module to solve statically determinate beams using basic equilibrium equations.
+In structural engineering, the ability to quickly and accurately calculate internal forces in a beam is fundamental. While professional software like **ETABS** or **AutoCAD** is powerful for large-scale projects, I wanted to create a lightweight, open-source Python module to solve statically determinate beams using basic equilibrium equations.This thought intrigued me during my third semester at Pulchowk Campus. Then I tried implementing the Macaulay's method, which seemed dooable at that time. And, here is what I built.
 
 ## About the Module
 
@@ -19,7 +19,7 @@ This module is designed to solve 2D beams by applying the three equations of sta
 
 ### Supported Features
 
-- **Determinate 2D Beams:** Support for Point Loads, UDL, UVL, and Point Moments.
+- **Determinate 2D Beams:** Support for Point Loads, Inclined Point Loads, UDL, UVL, and Point Moments.
 - **Support Conditions:** Fixed, Hinged, or Roller supports.
 - **Internal Hinges:** Capable of handling beams with internal discontinuities.
 - **Visual Output:** Generates Shear Force Diagrams (SFD) and Bending Moment Diagrams (BMD).
@@ -59,4 +59,4 @@ my_beam.plot()
 
 Building this tool was as much about the process as the result. It allowed me to bridge the gap between Civil Engineering theory and Python automation. By sharing it on GitHub, I hope to provide a helpful resource for fellow IOE students and hobbyist coders interested in structural analysis.
 
-For more technical details and source code, visit the GitHub Repository.
+For more technical details and source code, visit the [GitHub Repository](https://github.com/Ashim-Paudel/Python-Beam-Analysis)
