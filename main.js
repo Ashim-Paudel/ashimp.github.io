@@ -1,6 +1,5 @@
 /* =============================================
    main.js — Ashim Paudel Portfolio
-   All interactive behaviour lives here.
 ============================================= */
 
 'use strict';
@@ -62,7 +61,6 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // =============================================
 // 4. SKILL RINGS — build + animate on scroll
 // =============================================
-// Wrap everything in a DOMContentLoaded listener to ensure the HTML is ready
 document.addEventListener('DOMContentLoaded', () => {
     const SKILLS = [
       { label: 'Python',     pct: 85, icon: 'fab fa-python' },            // Standard Brand
@@ -172,7 +170,7 @@ const terminalLines = [
   { prompt: '',   text: '', delay: 200 },
   { prompt: '',   key: 'Name        ', val: ': Ashim Paudel', delay: 100 },
   { prompt: '',   key: 'Aka        ', val: ': theCuriousAshim', delay: 100 },
-  { prompt: '',   key: 'Degree      ', val: ': B.E. Civil Engineering, IOE', delay: 100 },
+  { prompt: '',   key: 'Degree      ', val: ': B.E. Civil Engineering, IOE Pulchowk Campus', delay: 100 },
   { prompt: '',   key: 'Aggregate   ', val: ': 84.60% — Rank 6', delay: 100 },
   // { prompt: '',   key: 'PSC Federal ', val: ': Rank #1 (2026)', delay: 100 },
   { prompt: '',   key: 'PSC Gandaki ', val: ': Rank #1 (2026)', delay: 100 },
