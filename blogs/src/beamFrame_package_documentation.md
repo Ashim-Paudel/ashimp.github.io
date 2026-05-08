@@ -1,6 +1,6 @@
 ---
 title: Documentation of Python Beam Analysis Package
-date: Apr 2026
+date: 2026-04-01
 tag: [Documentation, Python, Engineering]
 description: The detailed description of all the classes, functions and how to use the package.
 ---
