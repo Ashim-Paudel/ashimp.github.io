@@ -265,3 +265,33 @@ achFilterBtns.forEach(btn => {
 
 document.querySelector('.footer-left').innerHTML = 
   `<i class="fas fa-copyright"></i> ${new Date().getFullYear()} Ashim Paudel · Designed & Built by Ashim Paudel`;
+
+
+
+// Function to fetch and update view count
+async function updateViewCount() {
+    const counterElement = document.getElementById('view-count');
+    
+    // Safety check to make sure the element exists on the current page
+    if (!counterElement) return;
+
+    // We use window.location.pathname as the ID so you can track different pages (home, blog, etc.)
+    const pageId = encodeURIComponent(window.location.pathname);
+    const workerUrl = `https://view-counter.paudelashim111.workers.dev/?page=${pageId}`;
+
+    try {
+        const response = await fetch(workerUrl);
+        if (!response.ok) throw new Error('Network response was not ok');
+        
+        const data = await response.json();
+        
+        // Update the HTML element with the number from Cloudflare
+        counterElement.innerText = data.views.toLocaleString(); 
+    } catch (error) {
+        console.error('Failed to update view count:', error);
+        counterElement.innerText = "—"; // Fallback if the API is down
+    }
+}
+
+// Call the function when the script loads
+updateViewCount();
